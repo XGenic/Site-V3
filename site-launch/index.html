@@ -17,245 +17,250 @@
     <div data-include="site-header"></div>
 
     <main class="home-page">
-        <section class="home-hero" aria-labelledby="home-title">
-            <div class="home-shell">
-                <div class="home-hero__copy">
-                    <p class="home-kicker">Fort Lauderdale Yacht Charters</p>
-                    <h1 id="home-title">Luxury Yacht Charters & Boat Rentals in Fort Lauderdale, FL</h1>
-                    <p>Experience luxury yacht charters and premium boat rentals in Fort Lauderdale, FL. Cruise the scenic waterways of South Florida aboard our handpicked fleet of yachts.</p>
-                    <div class="home-hero__actions">
-                        <a class="home-btn home-btn--primary" href="/book-now/">Book Now</a>
-                        <a class="home-btn home-btn--ghost" href="/yachts/">Explore Yachts</a>
-                    </div>
-                </div>
-                <div class="home-hero__media" aria-hidden="true">
-                    <img src="/assets/imgs/General/General01.webp" alt="" loading="eager" decoding="async">
-                </div>
+    <section class="home-fleet" aria-labelledby="home-fleet-title">
+      <div class="home-section-head">
+        <p class="home-kicker">Fleet</p>
+        <h2 id="home-fleet-title">Choose Your Yacht</h2>
+      </div>
+      <div class="home-fleet-carousel yacht-grid" data-home-carousel tabindex="0" aria-label="Yacht carousel">
+          <a class="yacht-card tier-standard" href="/yacht/fairline/">
+            <div class="yacht-media">
+              <img class="yacht-image" src="/assets/imgs/Fairline/Fairline1.webp" alt="Fairline 50">
+              <span class="yacht-ribbon">Standard</span>
             </div>
-        </section>
-
-        <section class="home-fleet" aria-labelledby="home-fleet-title">
-            <div class="home-section-head">
-                <p class="home-kicker">Browse The Fleet</p>
-                <h2 id="home-fleet-title">Choose Your Yacht</h2>
-                <p>Explore every active yacht in the Flamingo fleet and open the detail page when a boat fits your day.</p>
+            <div class="yacht-info">
+              <span class="yacht-tier">Standard</span>
+              <h3 class="yacht-title">Fairline 50</h3>
+              <p class="yacht-subtitle">50 Ft Luxury Motor Yacht</p>
+              <div class="yacht-meta">
+                <span class="yacht-chip">13 Guests</span>
+                <span class="yacht-chip">From $650/hr</span>
+              </div>
             </div>
-            <div class="home-carousel-shell">
-                <div class="home-boat-carousel" data-home-carousel aria-label="Yacht carousel" tabindex="0">
-
-              <a class="home-boat-card tier-standard" href="/yacht/fairline/" data-home-boat-card>
-                <img src="/assets/imgs/Fairline/Fairline1.webp" alt="Fairline yacht" loading="eager" decoding="async">
-                <span class="home-boat-tier">standard</span>
-                <div class="home-boat-body">
-                  <div class="home-boat-meta">
-                    <span>Starting at $750</span>
-                    <span>12 guests</span>
-                  </div>
-                  <h3>Fairline</h3>
-                  <p class="home-boat-subtitle">Classic European cruiser</p>
-                  <p>Open-air cockpit, cabin comfort, and easygoing charter flexibility.</p>
-                  <span class="home-boat-link">View Details</span>
-                </div>
-              </a>
-              <a class="home-boat-card tier-standard" href="/yacht/sea-ray/" data-home-boat-card>
-                <img src="/assets/imgs/Searay/Searay1.webp" alt="Sea Ray yacht" loading="eager" decoding="async">
-                <span class="home-boat-tier">standard</span>
-                <div class="home-boat-body">
-                  <div class="home-boat-meta">
-                    <span>Starting at $1,125</span>
-                    <span>12 guests</span>
-                  </div>
-                  <h3>Sea Ray</h3>
-                  <p class="home-boat-subtitle">Spacious coastal cruiser</p>
-                  <p>Bridge views, salon space, and a familiar yacht layout for relaxed cruising.</p>
-                  <span class="home-boat-link">View Details</span>
-                </div>
-              </a>
-              <a class="home-boat-card tier-premium" href="/yacht/vg/" data-home-boat-card>
-                <img src="/assets/imgs/VG/VG%20(1).webp" alt="VG yacht" loading="eager" decoding="async">
-                <span class="home-boat-tier">premium</span>
-                <div class="home-boat-body">
-                  <div class="home-boat-meta">
-                    <span>Starting at $1,500</span>
-                    <span>12 guests</span>
-                  </div>
-                  <h3>VG</h3>
-                  <p class="home-boat-subtitle">Power catamaran luxury</p>
-                  <p>Wide gathering areas, flybridge views, and polished comfort for social charters.</p>
-                  <span class="home-boat-link">View Details</span>
-                </div>
-              </a>
-              <a class="home-boat-card tier-premium" href="/yacht/fountaine-pajot/" data-home-boat-card>
-                <img src="/assets/imgs/FP/FP1.webp" alt="Fountaine Pajot yacht" loading="lazy" decoding="async">
-                <span class="home-boat-tier">premium</span>
-                <div class="home-boat-body">
-                  <div class="home-boat-meta">
-                    <span>Starting at $1,650</span>
-                    <span>12 guests</span>
-                  </div>
-                  <h3>Fountaine Pajot</h3>
-                  <p class="home-boat-subtitle">French sailing catamaran</p>
-                  <p>A steady, spacious catamaran with open decks and premium lounging space.</p>
-                  <span class="home-boat-link">View Details</span>
-                </div>
-              </a>
-              <a class="home-boat-card tier-premium" href="/yacht/savannah/" data-home-boat-card>
-                <img src="/assets/imgs/Savannah/Savannah1.webp" alt="Savannah yacht" loading="lazy" decoding="async">
-                <span class="home-boat-tier">premium</span>
-                <div class="home-boat-body">
-                  <div class="home-boat-meta">
-                    <span>Starting at $1,200</span>
-                    <span>12 guests</span>
-                  </div>
-                  <h3>Savannah</h3>
-                  <p class="home-boat-subtitle">Elegant express cruiser</p>
-                  <p>Refined cabin space and generous lounges for intimate celebrations on the water.</p>
-                  <span class="home-boat-link">View Details</span>
-                </div>
-              </a>
-              <a class="home-boat-card tier-sandbar" href="/yacht/formula-40pc/" data-home-boat-card>
-                <img src="/assets/imgs/Formula40PC/Formula01.webp" alt="Formula 40PC yacht" loading="lazy" decoding="async">
-                <span class="home-boat-tier">sandbar</span>
-                <div class="home-boat-body">
-                  <div class="home-boat-meta">
-                    <span>Starting at $400</span>
-                    <span>12 guests</span>
-                  </div>
-                  <h3>Formula 40PC</h3>
-                  <p class="home-boat-subtitle">Comfortable sandbar cruiser</p>
-                  <p>A versatile cruiser for anchoring, swimming, sightseeing, and casual group days.</p>
-                  <span class="home-boat-link">View Details</span>
-                </div>
-              </a>
-              <a class="home-boat-card tier-sandbar" href="/yacht/greenline/" data-home-boat-card>
-                <img src="/assets/imgs/Greenline/Greenline01.webp" alt="Greenline yacht" loading="lazy" decoding="async">
-                <span class="home-boat-tier">sandbar</span>
-                <div class="home-boat-body">
-                  <div class="home-boat-meta">
-                    <span>Starting at $800</span>
-                    <span>12 guests</span>
-                  </div>
-                  <h3>Greenline</h3>
-                  <p class="home-boat-subtitle">Modern day boat</p>
-                  <p>Efficient cruising, open seating, and a clean setup for local routes.</p>
-                  <span class="home-boat-link">View Details</span>
-                </div>
-              </a>
-              <a class="home-boat-card tier-sandbar" href="/yacht/axopar/" data-home-boat-card>
-                <img src="/assets/imgs/Axopar/Axopar01.webp" alt="Axopar yacht" loading="lazy" decoding="async">
-                <span class="home-boat-tier">sandbar</span>
-                <div class="home-boat-body">
-                  <div class="home-boat-meta">
-                    <span>Starting at $650</span>
-                    <span>9 guests</span>
-                  </div>
-                  <h3>Axopar</h3>
-                  <p class="home-boat-subtitle">Sporty cross-cabin boat</p>
-                  <p>Fast, sleek, and protected for active Fort Lauderdale water days.</p>
-                  <span class="home-boat-link">View Details</span>
-                </div>
-              </a>
-              <a class="home-boat-card tier-sandbar" href="/yacht/chris-craft/" data-home-boat-card>
-                <img src="/assets/imgs/ChrisCraft/Chriscraft01.webp" alt="Chris Craft yacht" loading="lazy" decoding="async">
-                <span class="home-boat-tier">sandbar</span>
-                <div class="home-boat-body">
-                  <div class="home-boat-meta">
-                    <span>Starting at $600</span>
-                    <span>6 guests</span>
-                  </div>
-                  <h3>Chris Craft</h3>
-                  <p class="home-boat-subtitle">Classic runabout style</p>
-                  <p>Compact, stylish, and easy for smaller groups and sandbar stops.</p>
-                  <span class="home-boat-link">View Details</span>
-                </div>
-              </a>
-              <a class="home-boat-card tier-sandbar" href="/yacht/rinker/" data-home-boat-card>
-                <img src="/assets/imgs/Rinker/Rinker01.webp" alt="Rinker yacht" loading="lazy" decoding="async">
-                <span class="home-boat-tier">sandbar</span>
-                <div class="home-boat-body">
-                  <div class="home-boat-meta">
-                    <span>Starting at $350</span>
-                    <span>12 guests</span>
-                  </div>
-                  <h3>Rinker</h3>
-                  <p class="home-boat-subtitle">Easygoing bowrider</p>
-                  <p>Simple handling and comfortable seating for quick local no-captain trips.</p>
-                  <span class="home-boat-link">View Details</span>
-                </div>
-              </a>
-              <a class="home-boat-card tier-sandbar" href="/yacht/starcraft/" data-home-boat-card>
-                <img src="/assets/imgs/Starcraft/Starcraft01.webp" alt="Starcraft yacht" loading="lazy" decoding="async">
-                <span class="home-boat-tier">sandbar</span>
-                <div class="home-boat-body">
-                  <div class="home-boat-meta">
-                    <span>Starting at $350</span>
-                    <span>12 guests</span>
-                  </div>
-                  <h3>Starcraft</h3>
-                  <p class="home-boat-subtitle">Casual pontoon comfort</p>
-                  <p>Open deck space and a slower relaxed pace for casual water days.</p>
-                  <span class="home-boat-link">View Details</span>
-                </div>
-              </a>
-              <a class="home-boat-card tier-luxury" href="/yacht/pardo/" data-home-boat-card>
-                <img src="/assets/imgs/Pardo/Pardo01.webp" alt="Pardo yacht" loading="lazy" decoding="async">
-                <span class="home-boat-tier">luxury</span>
-                <div class="home-boat-body">
-                  <div class="home-boat-meta">
-                    <span>Starting at $3,000</span>
-                    <span>12 guests</span>
-                  </div>
-                  <h3>Pardo</h3>
-                  <p class="home-boat-subtitle">Modern Italian luxury</p>
-                  <p>Refined walkaround styling, premium finishes, and upscale day-charter presence.</p>
-                  <span class="home-boat-link">View Details</span>
-                </div>
-              </a>
-              <a class="home-boat-card tier-luxury" href="/yacht/sunreef/" data-home-boat-card>
-                <img src="/assets/imgs/Sunreef/Sunreef01.webp" alt="Sunreef yacht" loading="lazy" decoding="async">
-                <span class="home-boat-tier">luxury</span>
-                <div class="home-boat-body">
-                  <div class="home-boat-meta">
-                    <span>Starting at $5,500</span>
-                    <span>12 guests</span>
-                  </div>
-                  <h3>Sunreef</h3>
-                  <p class="home-boat-subtitle">Ultra-luxury power catamaran</p>
-                  <p>Expansive decks, premium amenities, and standout space for luxury celebrations.</p>
-                  <span class="home-boat-link">View Details</span>
-                </div>
-              </a>
-                </div>
-                <div class="home-progress" aria-label="Carousel progress">
-                    <div class="home-progress__track" data-home-progress-track>
-                        <button class="home-progress__thumb" type="button" data-home-progress-thumb role="slider" aria-label="Drag yacht carousel progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></button>
-                    </div>
-                </div>
+          </a>
+          <a class="yacht-card tier-standard" href="/yacht/sea-ray/">
+            <div class="yacht-media">
+              <img class="yacht-image" src="/assets/imgs/Searay/Searay1.webp" alt="Sea Ray Sundancer">
+              <span class="yacht-ribbon">Standard</span>
             </div>
-        </section>
-
-        <section class="home-quick-links" aria-label="Activity categories">
-            <a href="/services/learn-to-sail/" class="home-quick-link"><span aria-hidden="true">S</span><strong>Sail</strong><em>Take a leisure sail through South Florida???s near-endless coast</em></a>
-            <a href="/services/cruise/" class="home-quick-link"><span aria-hidden="true">C</span><strong>Cruise</strong><em>Cruise through Fort Lauderdale and visit local hotspots</em></a>
-            <a href="/services/watersports/" class="home-quick-link"><span aria-hidden="true">W</span><strong>Watersports</strong><em>Snorkeling, trampolines, tubing, jet skis, it???s all possible</em></a>
-            <a href="/services/day-trips/" class="home-quick-link"><span aria-hidden="true">F</span><strong>Fish</strong><em>Take a chance with our wildlife and bring home fish for dinner</em></a>
-            <a href="/services/millionaires-row-tour/" class="home-quick-link"><span aria-hidden="true">T</span><strong>Tour</strong><em>Explore the city???s history and modern luxury with our guides</em></a>
-        </section>
-
-        <section class="home-experiences" aria-labelledby="home-experiences-title">
-            <div class="home-section-head home-section-head--compact">
-                <p class="home-kicker">Unique Experiences</p>
-                <h2 id="home-experiences-title">Signature Days On The Water</h2>
+            <div class="yacht-info">
+              <span class="yacht-tier">Standard</span>
+              <h3 class="yacht-title">Sea Ray Sundancer</h3>
+              <p class="yacht-subtitle">42 Ft Express Cruiser</p>
+              <div class="yacht-meta">
+                <span class="yacht-chip">13 Guests</span>
+                <span class="yacht-chip">From $500/hr</span>
+              </div>
             </div>
-            <div class="home-experience-grid">
-                <a href="/services/sunset-cruise/">Sunset Cruise</a>
-                <a href="/services/sandbar-trip/">Sandbar Tour</a>
-                <a href="/services/dinner-cruise/">Dinner Cruise</a>
+          </a>
+          <a class="yacht-card tier-premium" href="/yacht/vg/">
+            <div class="yacht-media">
+              <img class="yacht-image" src="/assets/imgs/VG/VG%20(1).webp" alt="Vanquish">
+              <span class="yacht-ribbon">Premium</span>
             </div>
-        </section>
+            <div class="yacht-info">
+              <span class="yacht-tier">Premium</span>
+              <h3 class="yacht-title">Vanquish</h3>
+              <p class="yacht-subtitle">55 Ft Luxury Cruiser</p>
+              <div class="yacht-meta">
+                <span class="yacht-chip">13 Guests</span>
+                <span class="yacht-chip">From $850/hr</span>
+              </div>
+            </div>
+          </a>
+          <a class="yacht-card tier-premium" href="/yacht/fountaine-pajot/">
+            <div class="yacht-media">
+              <img class="yacht-image" src="/assets/imgs/FP/FP1.webp" alt="Fountaine Pajot">
+              <span class="yacht-ribbon">Premium</span>
+            </div>
+            <div class="yacht-info">
+              <span class="yacht-tier">Premium</span>
+              <h3 class="yacht-title">Fountaine Pajot</h3>
+              <p class="yacht-subtitle">40 Ft Sailing Catamaran</p>
+              <div class="yacht-meta">
+                <span class="yacht-chip">13 Guests</span>
+                <span class="yacht-chip">From $700/hr</span>
+              </div>
+            </div>
+          </a>
+          <a class="yacht-card tier-premium" href="/yacht/savannah/">
+            <div class="yacht-media">
+              <img class="yacht-image" src="/assets/imgs/Savannah/Savannah1.webp" alt="Savannah">
+              <span class="yacht-ribbon">Premium</span>
+            </div>
+            <div class="yacht-info">
+              <span class="yacht-tier">Premium</span>
+              <h3 class="yacht-title">Savannah</h3>
+              <p class="yacht-subtitle">48 Ft Luxury Motor Yacht</p>
+              <div class="yacht-meta">
+                <span class="yacht-chip">13 Guests</span>
+                <span class="yacht-chip">From $650/hr</span>
+              </div>
+            </div>
+          </a>
+          <a class="yacht-card tier-sandbar" href="/yacht/formula-40-pc/">
+            <div class="yacht-media">
+              <img class="yacht-image" src="/assets/imgs/Formula40PC/Formula01.webp" alt="Formula 40PC">
+              <span class="yacht-ribbon">Sandbar</span>
+            </div>
+            <div class="yacht-info">
+              <span class="yacht-tier">Sandbar</span>
+              <h3 class="yacht-title">Formula 40PC</h3>
+              <p class="yacht-subtitle">40 Ft Performance Cruiser</p>
+              <div class="yacht-meta">
+                <span class="yacht-chip">13 Guests</span>
+                <span class="yacht-chip">From $400/hr</span>
+              </div>
+            </div>
+          </a>
+          <a class="yacht-card tier-sandbar" href="/yacht/greenline/">
+            <div class="yacht-media">
+              <img class="yacht-image" src="/assets/imgs/Greenline/Greenline01.webp" alt="Greenline 45">
+              <span class="yacht-ribbon">Sandbar</span>
+            </div>
+            <div class="yacht-info">
+              <span class="yacht-tier">Sandbar</span>
+              <h3 class="yacht-title">Greenline 45</h3>
+              <p class="yacht-subtitle">45 Ft Eco Cruiser</p>
+              <div class="yacht-meta">
+                <span class="yacht-chip">13 Guests</span>
+                <span class="yacht-chip">From $500/hr</span>
+              </div>
+            </div>
+          </a>
+          <a class="yacht-card tier-sandbar" href="/yacht/axopar/">
+            <div class="yacht-media">
+              <img class="yacht-image" src="/assets/imgs/Axopar/Axopar01.webp" alt="Axopar 37 XC">
+              <span class="yacht-ribbon">Sandbar</span>
+            </div>
+            <div class="yacht-info">
+              <span class="yacht-tier">Sandbar</span>
+              <h3 class="yacht-title">Axopar 37 XC</h3>
+              <p class="yacht-subtitle">37 Ft Adventure Cruiser</p>
+              <div class="yacht-meta">
+                <span class="yacht-chip">13 Guests</span>
+                <span class="yacht-chip">From $350/hr</span>
+              </div>
+            </div>
+          </a>
+          <a class="yacht-card tier-sandbar" href="/yacht/chris-craft/">
+            <div class="yacht-media">
+              <img class="yacht-image" src="/assets/imgs/ChrisCraft/Chriscraft01.webp" alt="Chris Craft 30">
+              <span class="yacht-ribbon">Sandbar</span>
+            </div>
+            <div class="yacht-info">
+              <span class="yacht-tier">Sandbar</span>
+              <h3 class="yacht-title">Chris Craft 30</h3>
+              <p class="yacht-subtitle">30 Ft Classic Cruiser</p>
+              <div class="yacht-meta">
+                <span class="yacht-chip">6 Guests</span>
+                <span class="yacht-chip">From $300/hr</span>
+              </div>
+            </div>
+          </a>
+          <a class="yacht-card tier-sandbar" href="/yacht/rinker/">
+            <div class="yacht-media">
+              <img class="yacht-image" src="/assets/imgs/Rinker/Rinker01.webp" alt="Rinker 260">
+              <span class="yacht-ribbon">Sandbar</span>
+            </div>
+            <div class="yacht-info">
+              <span class="yacht-tier">Sandbar</span>
+              <h3 class="yacht-title">Rinker 260</h3>
+              <p class="yacht-subtitle">26 Ft Cabin Cruiser</p>
+              <div class="yacht-meta">
+                <span class="yacht-chip">6 Guests</span>
+                <span class="yacht-chip">From $200/hr</span>
+              </div>
+            </div>
+          </a>
+          <a class="yacht-card tier-sandbar" href="/yacht/starcraft/">
+            <div class="yacht-media">
+              <img class="yacht-image" src="/assets/imgs/Starcraft/Starcraft01.webp" alt="Starcraft Pontoon">
+              <span class="yacht-ribbon">Sandbar</span>
+            </div>
+            <div class="yacht-info">
+              <span class="yacht-tier">Sandbar</span>
+              <h3 class="yacht-title">Starcraft Pontoon</h3>
+              <p class="yacht-subtitle">22 Ft Pontoon</p>
+              <div class="yacht-meta">
+                <span class="yacht-chip">10 Guests</span>
+                <span class="yacht-chip">From $175/hr</span>
+              </div>
+            </div>
+          </a>
+          <a class="yacht-card tier-luxury" href="/yacht/pardo/">
+            <div class="yacht-media">
+              <img class="yacht-image" src="/assets/imgs/Pardo/Pardo01.webp" alt="Pardo 50">
+              <span class="yacht-ribbon">Luxury</span>
+            </div>
+            <div class="yacht-info">
+              <span class="yacht-tier">Luxury</span>
+              <h3 class="yacht-title">Pardo 50</h3>
+              <p class="yacht-subtitle">50 Ft Italian Luxury Yacht</p>
+              <div class="yacht-meta">
+                <span class="yacht-chip">13 Guests</span>
+                <span class="yacht-chip">From $1,000/hr</span>
+              </div>
+            </div>
+          </a>
+          <a class="yacht-card tier-luxury" href="/yacht/sunreef/">
+            <div class="yacht-media">
+              <img class="yacht-image" src="/assets/imgs/Sunreef/Sunreef01.webp" alt="Sunreef 70">
+              <span class="yacht-ribbon">Luxury</span>
+            </div>
+            <div class="yacht-info">
+              <span class="yacht-tier">Luxury</span>
+              <h3 class="yacht-title">Sunreef 70</h3>
+              <p class="yacht-subtitle">70 Ft Luxury Catamaran</p>
+              <div class="yacht-meta">
+                <span class="yacht-chip">13 Guests</span>
+                <span class="yacht-chip">From $2,500/hr</span>
+              </div>
+            </div>
+          </a>
+      </div>
+      <div class="home-carousel-progress" data-home-progress aria-label="Yacht carousel progress">
+        <button class="home-carousel-thumb" type="button" data-home-progress-thumb aria-label="Drag to scroll yachts"></button>
+      </div>
+    </section>
 
-        <section class="home-copy-panel home-intro-copy">
-            <h1>Luxury Yacht Charters & Boat Rentals in Fort Lauderdale, FL</h1>
+    <section class="home-quick-links" aria-label="Charter categories">
+      <a class="home-quick-link" href="/services/learn-to-sail/"><span>Sail</span></a>
+      <a class="home-quick-link" href="/services/cruise/"><span>Cruise</span></a>
+      <a class="home-quick-link" href="/services/watersports/"><span>Watersports</span></a>
+      <a class="home-quick-link" href="/services/day-trips/"><span>Fish</span></a>
+      <a class="home-quick-link" href="/services/millionaires-row-tour/"><span>Tour</span></a>
+    </section>
+
+    <section class="home-tier-banner" aria-labelledby="home-tier-title">
+      <div class="home-tier-banner__inner">
+        <div class="home-section-head home-section-head--light">
+          <p class="home-kicker">Yacht Tiers</p>
+          <h2 id="home-tier-title">Find The Right Boat Faster</h2>
+        </div>
+        <div class="home-tier-grid">
+          <a class="home-tier-card" href="/yachts/?tier=standard">
+            <img src="/assets/imgs/Fairline/Fairline1.webp" alt="Standard yacht charter option">
+            <span class="home-tier-price">&gt;$1000</span>
+            <span class="home-tier-name">Standard</span>
+          </a>
+          <a class="home-tier-card" href="/yachts/?tier=premium">
+            <img src="/assets/imgs/VG/VG%20(1).webp" alt="Premium yacht charter option">
+            <span class="home-tier-price">$1000-$2000</span>
+            <span class="home-tier-name">Premium</span>
+          </a>
+          <a class="home-tier-card" href="/yachts/?tier=luxury">
+            <img src="/assets/imgs/Pardo/Pardo01.webp" alt="Luxury yacht charter option">
+            <span class="home-tier-price">$2,000</span>
+            <span class="home-tier-name">Luxury</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-copy-panel home-intro-feature">
+            <div class="home-intro-text">
+<h1>Luxury Yacht Charters & Boat Rentals in Fort Lauderdale, FL</h1>
             <p>Experience
              luxury yacht charters and premium boat rentals in Fort Lauderdale, FL.
             Cruise the scenic waterways of South Florida aboard our handpicked fleet
@@ -266,9 +271,61 @@
             customized amenities, and enjoy world-class service on every voyage.
             Book your Fort Lauderdale yacht charter today and discover the best of
             boating, sightseeing, and maritime luxury.</p>
+        </div>
+        <div class="home-general-gallery" aria-label="Yacht charter photo gallery">
+          <div class="home-general-gallery__track">
+            <img src="/assets/imgs/General/General01.webp" alt="Fort Lauderdale yacht charter on the water">
+            <img src="/assets/imgs/General/General02.webp" alt="Yacht guests enjoying a private charter">
+            <img src="/assets/imgs/General/General03.webp" alt="Luxury yacht cruising in Fort Lauderdale">
+            <img src="/assets/imgs/General/General04.webp" alt="Boat rental guests by the water">
+            <img src="/assets/imgs/General/General05.webp" alt="Private yacht charter deck view">
+            <img src="/assets/imgs/General/General06.webp" alt="Fort Lauderdale waterway yacht charter">
+            <img src="/assets/imgs/General/General08.webp" alt="Yacht charter lifestyle scene">
+          </div>
+        </div>
         </section>
 
-        <section class="home-copy-panel">
+    <section class="home-contact-banner" aria-labelledby="home-contact-title">
+      <div class="home-contact-inner">
+        <div class="home-contact-copy">
+          <p class="home-kicker">Inquire</p>
+          <h2 id="home-contact-title">Plan Your Charter</h2>
+        </div>
+        <form class="contact-form" method="post" action="/yacht/contact.php">
+          <input type="hidden" name="boat" value="Homepage Inquiry" />
+          <input type="hidden" name="page_url" value="/" />
+          <div class="contact-grid">
+            <div class="contact-field">
+              <label for="home-contact-name">Name</label>
+              <input class="contact-input" id="home-contact-name" name="name" type="text" autocomplete="name" required />
+            </div>
+            <div class="contact-field">
+              <label for="home-contact-phone">Phone Number</label>
+              <input class="contact-input" id="home-contact-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required />
+            </div>
+            <div class="contact-field">
+              <label for="home-contact-email">Email</label>
+              <input class="contact-input" id="home-contact-email" name="email" type="email" autocomplete="email" required />
+            </div>
+            <div class="contact-field">
+              <label for="home-contact-date">Estimated Date</label>
+              <input class="contact-input" id="home-contact-date" name="charter_date" type="text" placeholder="Ex: June 14 or next Saturday" required />
+            </div>
+          </div>
+          <div class="contact-field">
+            <label for="home-contact-message">Message</label>
+            <textarea class="contact-input contact-textarea" id="home-contact-message" name="message" rows="6" placeholder="Tell us your preferred date, group size, and any special requests." required></textarea>
+          </div>
+          <label class="contact-opt-in">
+            <input type="checkbox" name="transactional_consent" value="1" />
+            <span>I consent to receive SMS messages from Flamingo Yacht Charters related to my booking, account updates, and promotional offers. Message frequency may vary. Message and data rates may apply. Reply STOP to opt out or HELP for help. See our <a href="/privacy-policy/">Privacy Policy</a> and <a href="/sms-terms/">SMS Terms &amp; Conditions</a>.</span>
+          </label>
+          <button class="contact-submit" type="submit">Send Inquiry</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="home-copy-panel">
             <h2>Fort Lauderdale Yacht Charters</h2>
             <p>South
              Florida may be renowned for its beautiful beaches, but its waters
@@ -362,66 +419,20 @@ floor.</p></article>
             </div>
         </section>
 
-        <section class="home-copy-panel home-rental-panel">
+    <section class="home-copy-panel home-rental-panel home-rental-split">
             <h2>Fort Lauderdale Boat Rentals</h2>
             <p>While
              we strive to provide a customized experience with our private yacht
             charters, we know that sometimes you simply want a boat ride to
             yourself. Utilize our small boat rental and explore the beautiful waters
              of Fort Lauderdale at your own pace. To rent a boat in Fort Lauderdale <a href="/services/no-captain-boat-rental/" target="_blank" rel="noopener">without a captain</a>, please contact our team or view our online checkout tool.</p>
-            <h6>With Captain</h6>
-            <h6>No Captain</h6>
-            <div class="home-rental-links">
+            <div class="home-rental-circle-links" aria-label="Boat rental options">
                 <a href="/services/boat-rental-with-captain/">With Captain</a>
                 <a href="/services/no-captain-rentals/">No Captain</a>
             </div>
         </section>
 
-        <section class="home-copy-panel home-toys-panel">
-            <h2>Our Toys</h2>
-            <p>Having
-             the time of your life in the water is certainly one of the best ways to
-             make use of your yacht rental. We offer a variety of toys to enhance
-            your Fort Lauderdale <a href="/services/day-trips/">day trip</a>.
-             Some of our extras include robust floating mats that let you laze
-            around on the water securely and comfortably. We also offer a variety of
-             inflatables, such as our trampoline. For the more adventurous, we can
-            provide tubing equipment, snorkeling gear, and even <a href="/yacht/jet-ski-car/">jet ski cars</a>.</p>
-            <p>For
-             those seeking additional comfort and entertainment, we’ve thought of
-            every detail. Our premium amenities include high-end paddleboards
-            perfect for morning exercise and professional-grade fishing equipment
-            for impromptu angling opportunities.</p>
-            <div class="home-gallery" aria-label="Our toys gallery">
-
-              <a href="/wp-content/uploads/2025/12/2560x1440_DJI-20250904-8-1024x575.jpg" rel="magnific" class="home-gallery-item">
-                <img loading="lazy" decoding="async" width="2560" height="1440" src="/assets/imgs/General/General01.webp" alt="flamingoyachtcharters" draggable="false">
-              </a>
-              <a href="/wp-content/uploads/2024/11/2560x1440_DJI_20241107140027_0047_D-1024x575.jpg" rel="magnific" class="home-gallery-item">
-                <img loading="lazy" decoding="async" width="2560" height="1440" src="/assets/imgs/General/General02.webp" alt="flamingoyachtcharters" draggable="false">
-              </a>
-              <a href="/wp-content/uploads/2025/12/2560x1440_IMG_0438-1024x576.jpg" rel="magnific" class="home-gallery-item">
-                <img loading="lazy" decoding="async" width="2560" height="1440" src="/assets/imgs/General/General03.webp" alt="flamingoyachtcharters" draggable="false">
-              </a>
-              <a href="/wp-content/uploads/2024/11/2560x1440_IMG_9183-1024x576.jpg" rel="magnific" class="home-gallery-item">
-                <img loading="lazy" decoding="async" width="2560" height="1440" src="/assets/imgs/General/General04.webp" alt="flamingoyachtcharters" draggable="false">
-              </a>
-              <a href="/wp-content/uploads/2024/11/2560x1440_IMG_6377-1024x576.jpg" rel="magnific" class="home-gallery-item">
-                <img loading="lazy" decoding="async" width="2560" height="1440" src="/assets/imgs/General/General05.webp" alt="flamingoyachtcharters" draggable="false">
-              </a>
-              <a href="/wp-content/uploads/2024/11/2560x1440_IMG_3234-1024x576.jpg" rel="magnific" class="home-gallery-item">
-                <img loading="lazy" decoding="async" width="2560" height="1440" src="/assets/imgs/General/General06.webp" alt="flamingoyachtcharters" draggable="false">
-              </a>
-              <a href="/wp-content/uploads/2024/11/2560x1440_IMG_5046-1024x576.jpg" rel="magnific" class="home-gallery-item">
-                <img loading="lazy" decoding="async" width="2560" height="1440" src="/assets/imgs/General/General08.webp" alt="flamingoyachtcharters" draggable="false">
-              </a>
-              <a href="/wp-content/uploads/2024/11/2560x1440_IMG_0085-1024x576.jpg" rel="magnific" class="home-gallery-item">
-                <img loading="lazy" decoding="async" width="2560" height="1440" src="/assets/imgs/General/General10.webp" alt="flamingoyachtcharters" draggable="false">
-              </a>
-            </div>
-        </section>
-
-        <section class="home-copy-panel">
+    <section class="home-copy-panel">
             <h2>Luxury Yacht Charters in Fort Lauderdale</h2>
             <p>At
              Flamingo Yacht Charters, we believe that exceptional moments begin with
@@ -488,7 +499,7 @@ floor.</p></article>
             </div>
         </section>
 
-        <section class="home-copy-panel">
+    <section class="home-copy-panel">
             <h2>Premium Yacht Rentals</h2>
             <p>Our
              Premium Yacht Charters offer an elevated on-water experience that
@@ -566,7 +577,7 @@ floor.</p></article>
             </div>
         </section>
 
-        <section class="home-copy-panel">
+    <section class="home-copy-panel">
             <h2>Standard Yacht Charters</h2>
             <p>Our
              Standard Yacht Charters are designed for easygoing comfort and
@@ -622,8 +633,8 @@ floor.</p></article>
             </div>
         </section>
 
-        <section class="home-copy-panel home-final-copy">
-            <h2>Sandbar & Day Boats For Rent</h2>
+    <section class="home-copy-panel home-sandbar-panel">
+        <h2>Sandbar & Day Boats For Rent</h2>
             <p>Our
              Sandbar collection is all about fun, flexibility, and affordability.
             These boats for rent in Fort Lauderdale are perfect for casual outings,
@@ -633,6 +644,39 @@ floor.</p></article>
             to get out on the water without the formality of a larger yacht rental.
             Whether you’re floating, swimming, or cruising with music on and drinks
             in hand, these boats deliver maximum enjoyment with minimal fuss.</p>
+        <div class="home-yacht-features">
+          <article class="home-yacht-feature">
+            <img src="/assets/imgs/Axopar/Axopar01.webp" alt="Axopar 37 XC Cross Cabin">
+            <div>
+              <p class="home-kicker">Sandbar</p>
+              <h3>Axopar 37 XC</h3>
+              <p>The Axopar is built for efficient cruising, sandbar stops, and comfortable Fort Lauderdale day trips with a sleek adventure profile.</p>
+              <a href="/yacht/axopar/">Learn More</a>
+            </div>
+          </article>
+          <article class="home-yacht-feature">
+            <img src="/assets/imgs/Formula40PC/Formula01.webp" alt="Formula 40 PC yacht">
+            <div>
+              <p class="home-kicker">Sandbar</p>
+              <h3>Formula 40PC</h3>
+              <p>The Formula 40PC gives day groups a comfortable cruiser layout with strong deck space, cabin amenities, and easy sandbar access.</p>
+              <a href="/yacht/formula-40-pc/">Learn More</a>
+            </div>
+          </article>
+          <article class="home-yacht-feature">
+            <img src="/assets/imgs/ChrisCraft/Chriscraft01.webp" alt="Chris Craft boat rental">
+            <div>
+              <p class="home-kicker">Sandbar</p>
+              <h3>Chris Craft</h3>
+              <p>The Chris Craft is a compact, polished choice for smaller groups that want a classic day boat feel on the Intracoastal.</p>
+              <a href="/yacht/chris-craft/">Learn More</a>
+            </div>
+          </article>
+        </div>
+    </section>
+
+    <section class="home-copy-panel home-final-copy">
+
             <h2>The Best Fort Lauderdale Boat Rental Service</h2>
             <p>Flamingo
              Yacht Charters is your premier destination for unparalleled luxury
@@ -657,17 +701,11 @@ floor.</p></article>
              a memory to cherish. Let us redefine your yachting experience and
             create unforgettable moments that will last a lifetime.</p>
             <p>Discover more things to do in <a href="https://www.kayak.com/Fort-Lauderdale.16308.guide">Fort Lauderdale</a>.</p>
-            <h3>Have a Question?</h3>
-            <p><label>I
-             consent to receive SMS messages from Flamingo Yacht Charters related to
-             my booking, account updates, and promotional offers. Message frequency
-            may vary. Message and data rates may apply. Reply STOP to opt out or
-            HELP for help. See our <a href="/privacy-policy/">Privacy Policy</a> and <a href="/sms-terms/">SMS Terms & Conditions</a>.</label></p>
             <h2>Charter Your Boat</h2>
             <p>Apply to have your yacht managed by our dedicated team</p>
         </section>
-
-        <div class="cta-section">
+  </main>
+    <div class="cta-section">
             <div class="container">
                 <h2>Ready to Book Your Yacht Charter?</h2>
                 <p>Contact us today to plan your perfect Fort Lauderdale boating experience.</p>
@@ -675,7 +713,6 @@ floor.</p></article>
                 <a href="/contact/" class="btn-outline">Contact Us</a>
             </div>
         </div>
-    </main>
 
     <footer class="main-footer">
         <div class="container">
