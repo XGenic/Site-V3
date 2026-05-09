@@ -1724,7 +1724,7 @@ tr:last-child td{ border-bottom: 0; }
 }
 
 .activity-copy p{
-  max-width: 88ch;
+  max-width: none;
 }
 
 .activity-copy a{

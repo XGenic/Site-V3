@@ -61,6 +61,24 @@ a:hover { color: #ca2f45; }
 .main-footer .footer-links a:hover { color: #c89d55; }
 .main-footer .footer-copy { font-size: 12px; color: rgba(255,255,255,.4); border-top: 1px solid rgba(255,255,255,.1); padding-top: 20px; }
 
+footer:not(.main-footer) {
+    border-top: 0;
+    background: #16579a;
+    padding: 22px 0 40px;
+    color: #fff;
+    font-size: 13px;
+}
+
+footer:not(.main-footer) .wrap {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 18px;
+}
+
+footer:not(.main-footer) a {
+    color: #fff;
+}
+
 @media (max-width: 768px) {
     .content-body { padding: 32px 16px; }
     .cta-section .btn-outline { margin-left: 0; margin-top: 12px; }
