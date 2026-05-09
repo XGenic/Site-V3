@@ -12,6 +12,7 @@
     const mobileClose = document.getElementById('mobileClose');
     if (!mobileToggle || !mobileMenu) return;
     if (mobileToggle.dataset.sharedHeaderBound === 'true') return;
+    mobileToggle.dataset.sharedHeaderBound = 'true';
 
     const setMobileMenu = (open) => {
       if (open) mobileMenu.removeAttribute('hidden');

@@ -12,6 +12,7 @@
     const mobileClose = document.getElementById('mobileClose');
     if (!mobileToggle || !mobileMenu) return;
     if (mobileToggle.dataset.sharedHeaderBound === 'true') return;
+    mobileToggle.dataset.sharedHeaderBound = 'true';
 
     const setMobileMenu = (open) => {
       if (open) mobileMenu.removeAttribute('hidden');
@@ -145,95 +146,6 @@
     window.addEventListener('load', refreshAddonsPanels);
   };
 
-  const setupAccordionGroups = () => {
-    const groups = Array.from(document.querySelectorAll('[data-accordion-group]'));
-    if (!groups.length) return;
-
-    groups.forEach((group) => {
-      const triggers = Array.from(group.querySelectorAll('[data-accordion-trigger]'));
-      if (!triggers.length) return;
-
-      triggers.forEach((trigger) => {
-        if (trigger.dataset.accordionBound === 'true') return;
-        trigger.dataset.accordionBound = 'true';
-
-        trigger.addEventListener('click', () => {
-          const isExpanded = trigger.getAttribute('aria-expanded') === 'true';
-
-          triggers.forEach((otherTrigger) => {
-            const panelId = otherTrigger.getAttribute('aria-controls');
-            const panel = panelId ? document.getElementById(panelId) : null;
-            otherTrigger.setAttribute('aria-expanded', 'false');
-            if (panel) panel.hidden = true;
-          });
-
-          if (!isExpanded) {
-            const panelId = trigger.getAttribute('aria-controls');
-            const panel = panelId ? document.getElementById(panelId) : null;
-            trigger.setAttribute('aria-expanded', 'true');
-            if (panel) panel.hidden = false;
-          }
-        });
-      });
-    });
-  };
-
-  const setupMobileSidebarRelocation = () => {
-    const mobileQuery = window.matchMedia('(max-width: 980px)');
-    const sidebarSummary = document.querySelector('.right .summary');
-    const leftStack = document.querySelector('.left-stack');
-    const contactCard = leftStack?.querySelector('.contact-card');
-    const addonPromo = sidebarSummary?.querySelector('.addon-promo');
-    const packages = sidebarSummary?.querySelector('.sidebar-packages');
-    if (!sidebarSummary || !leftStack || !contactCard || !addonPromo || !packages) return;
-
-    let mobileContainer = document.querySelector('[data-mobile-sidebar-extras]');
-    if (!mobileContainer) {
-      mobileContainer = document.createElement('section');
-      mobileContainer.className = 'panel mobile-sidebar-extras';
-      mobileContainer.setAttribute('data-mobile-sidebar-extras', '');
-      mobileContainer.hidden = true;
-      leftStack.insertBefore(mobileContainer, contactCard);
-    }
-
-    const note = sidebarSummary.querySelector('.note');
-    const sidebarAnchor = document.createElement('div');
-    sidebarAnchor.setAttribute('data-sidebar-extras-anchor', '');
-    if (note) {
-      note.insertAdjacentElement('afterend', sidebarAnchor);
-    } else {
-      sidebarSummary.appendChild(sidebarAnchor);
-    }
-
-    const moveForViewport = (matchesMobile) => {
-      if (matchesMobile) {
-        if (!mobileContainer.contains(addonPromo)) mobileContainer.appendChild(addonPromo);
-        if (!mobileContainer.contains(packages)) mobileContainer.appendChild(packages);
-        mobileContainer.hidden = false;
-        return;
-      }
-
-      if (mobileContainer.contains(addonPromo)) {
-        sidebarAnchor.insertAdjacentElement('afterend', addonPromo);
-      }
-      if (mobileContainer.contains(packages)) {
-        addonPromo.insertAdjacentElement('afterend', packages);
-      }
-      mobileContainer.hidden = true;
-    };
-
-    moveForViewport(mobileQuery.matches);
-
-    const handleViewportChange = (event) => {
-      moveForViewport(event.matches);
-    };
-
-    if (typeof mobileQuery.addEventListener === 'function') {
-      mobileQuery.addEventListener('change', handleViewportChange);
-    } else if (typeof mobileQuery.addListener === 'function') {
-      mobileQuery.addListener(handleViewportChange);
-    }
-  };
   const setupContactForms = () => {
     const forms = Array.from(document.querySelectorAll('.contact-form'));
     if (!forms.length) return;
@@ -323,8 +235,6 @@
   // Mobile menu fallback for standalone pages without the shared header initializer.
   setupMobileMenu();
   setupAddonsPanels();
-  setupAccordionGroups();
-  setupMobileSidebarRelocation();
   setupContactForms();
   setupBoatSelection();
 
@@ -478,27 +388,6 @@
     if (e.key === 'Escape') closeLb();
     if (e.key === 'ArrowLeft') stepLb(-1);
     if (e.key === 'ArrowRight') stepLb(1);
-  });
-
-  // Pricing tabs
-  const pricingTabs = Array.from(document.querySelectorAll('.price-tabs .ptab'));
-  const selectPricingTab = (activeTab) => {
-    if (!activeTab || !pricingTabs.length) return;
-
-    pricingTabs.forEach((tab) => {
-      const panelId = tab.getAttribute('aria-controls');
-      const panel = panelId ? document.getElementById(panelId) : null;
-      const isActive = tab === activeTab;
-
-      tab.setAttribute('aria-selected', String(isActive));
-      if (!panel) return;
-      if (isActive) panel.removeAttribute('hidden');
-      else panel.setAttribute('hidden', '');
-    });
-  };
-
-  pricingTabs.forEach((tab) => {
-    tab.addEventListener('click', () => selectPricingTab(tab));
   });
 
   // Itinerary tabs

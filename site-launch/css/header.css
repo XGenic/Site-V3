@@ -574,7 +574,26 @@
 /* ============================================= */
 @media (max-width: 560px) {
   .navbar {
-    padding: 18px 12px 26px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 100%;
+    gap: 0;
+    overflow: hidden;
+    padding: 16px 10px 22px;
+  }
+
+  .brand {
+    flex: 1 1 auto;
+    min-width: 0;
+    max-width: calc(100% - 56px);
+  }
+
+  .brand-link {
+    max-width: 100%;
+    min-width: 0;
+    overflow: hidden;
   }
 
   .mobile-menu-inner {
@@ -582,13 +601,40 @@
   }
 
   .mobile-header-actions {
-    gap: 40px;
+    display: flex;
+    flex: 0 0 48px;
+    width: 48px;
+    margin-left: 8px;
+    justify-content: flex-end;
+    gap: 0;
   }
 
   .btn-book-mobile {
-    padding: 11px 15px;
-    font-size: 20px;
-    letter-spacing: .12em;
+    display: none !important;
+  }
+
+  .mobile-toggle {
+    display: inline-flex !important;
+    flex: 0 0 44px;
+    width: 44px;
+    height: 44px;
+  }
+
+  .brand-name {
+    display: block;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: clamp(20px, 6vw, 28px);
+  }
+
+  .brand-sub {
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 9px;
   }
 
   .mobile-search {

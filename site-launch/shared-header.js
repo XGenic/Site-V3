@@ -124,6 +124,7 @@ window.siteHeaderTemplate = `
 
       <nav class="mobile-nav" aria-label="Mobile navigation">
         <a href="/">Home</a>
+        <a href="/book-now/">Book Now</a>
 
         <div class="mobile-group">
           <div class="mobile-row">
@@ -271,9 +272,8 @@ window.siteHeaderTemplate = `
     initSharedHeaderMenu();
   };
 
+  initSharedHeader();
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initSharedHeader);
-  } else {
-    initSharedHeader();
   }
 })();
