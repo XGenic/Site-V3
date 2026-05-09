@@ -2,10 +2,14 @@
   const carousel = document.querySelector('[data-home-carousel]');
   const track = document.querySelector('[data-home-progress]');
   const thumb = document.querySelector('[data-home-progress-thumb]');
+  const gallery = document.querySelector('.home-general-gallery__track');
 
   if (!carousel || !track || !thumb) return;
 
   let isProgressDragging = false;
+  let isCarouselPaused = false;
+  let isGalleryPaused = false;
+  let galleryIndex = 0;
 
   thumb.setAttribute('aria-valuemin', '0');
   thumb.setAttribute('aria-valuemax', '100');
@@ -42,6 +46,40 @@
     return left / maxLeft;
   };
 
+  const getNextCarouselLeft = () => {
+    const maxScroll = getMaxScroll();
+    const cards = Array.from(carousel.children);
+    const currentLeft = carousel.scrollLeft;
+
+    if (!cards.length || currentLeft >= maxScroll - 8) {
+      return 0;
+    }
+
+    const nextCard = cards.find((card) => card.offsetLeft > currentLeft + 8);
+    return nextCard ? Math.min(nextCard.offsetLeft, maxScroll) : 0;
+  };
+
+  const advanceCarousel = () => {
+    if (isCarouselPaused || document.hidden || isProgressDragging) return;
+    carousel.scrollTo({
+      left: getNextCarouselLeft(),
+      behavior: 'smooth'
+    });
+  };
+
+  const advanceGallery = () => {
+    if (!gallery || isGalleryPaused || document.hidden) return;
+
+    const items = Array.from(gallery.querySelectorAll('img'));
+    if (items.length < 2) return;
+
+    galleryIndex = (galleryIndex + 1) % items.length;
+    gallery.scrollTo({
+      left: items[galleryIndex].offsetLeft - items[0].offsetLeft,
+      behavior: 'smooth'
+    });
+  };
+
   const startProgressDrag = (event) => {
     if (event.button !== 0) return;
     event.preventDefault();
@@ -66,6 +104,29 @@
   carousel.addEventListener('scroll', updateProgress, { passive: true });
   window.addEventListener('resize', updateProgress);
   window.addEventListener('load', updateProgress);
+  carousel.addEventListener('pointerenter', () => { isCarouselPaused = true; });
+  carousel.addEventListener('pointerleave', () => { isCarouselPaused = false; });
+  carousel.addEventListener('focusin', () => { isCarouselPaused = true; });
+  carousel.addEventListener('focusout', () => { isCarouselPaused = false; });
+
+  if (gallery) {
+    gallery.addEventListener('pointerenter', () => { isGalleryPaused = true; });
+    gallery.addEventListener('pointerleave', () => { isGalleryPaused = false; });
+    gallery.addEventListener('focusin', () => { isGalleryPaused = true; });
+    gallery.addEventListener('focusout', () => { isGalleryPaused = false; });
+    gallery.addEventListener('scroll', () => {
+      const items = Array.from(gallery.querySelectorAll('img'));
+      if (!items.length) return;
+
+      const scrollLeft = gallery.scrollLeft;
+      const nearest = items.reduce((best, item, index) => {
+        const distance = Math.abs((item.offsetLeft - items[0].offsetLeft) - scrollLeft);
+        return distance < best.distance ? { index, distance } : best;
+      }, { index: galleryIndex, distance: Infinity });
+
+      galleryIndex = nearest.index;
+    }, { passive: true });
+  }
 
   track.addEventListener('pointerdown', startProgressDrag);
   track.addEventListener('pointermove', moveProgressDrag);
@@ -102,5 +163,7 @@
     new ResizeObserver(updateProgress).observe(carousel);
   }
 
+  setInterval(advanceCarousel, 4200);
+  setInterval(advanceGallery, 3600);
   updateProgress();
 })();

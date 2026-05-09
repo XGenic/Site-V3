@@ -17,11 +17,7 @@
     <div data-include="site-header"></div>
 
     <main class="home-page">
-    <section class="home-fleet" aria-labelledby="home-fleet-title">
-      <div class="home-section-head">
-        <p class="home-kicker">Fleet</p>
-        <h2 id="home-fleet-title">Choose Your Yacht</h2>
-      </div>
+    <section class="home-fleet" aria-label="Yacht carousel">
       <div class="home-fleet-carousel yacht-grid" data-home-carousel tabindex="0" aria-label="Yacht carousel">
           <a class="yacht-card tier-standard" href="/yacht/fairline/">
             <div class="yacht-media">
@@ -45,8 +41,8 @@
             </div>
             <div class="yacht-info">
               <span class="yacht-tier">Standard</span>
-              <h3 class="yacht-title">Sea Ray Sundancer</h3>
-              <p class="yacht-subtitle">42 Ft Express Cruiser</p>
+              <h3 class="yacht-title">Sea Ray</h3>
+              <p class="yacht-subtitle">52 Ft Flybridge</p>
               <div class="yacht-meta">
                 <span class="yacht-chip">13 Guests</span>
                 <span class="yacht-chip">From $500/hr</span>
@@ -60,8 +56,8 @@
             </div>
             <div class="yacht-info">
               <span class="yacht-tier">Premium</span>
-              <h3 class="yacht-title">Vanquish</h3>
-              <p class="yacht-subtitle">55 Ft Luxury Cruiser</p>
+              <h3 class="yacht-title">VG</h3>
+              <p class="yacht-subtitle">62 Ft Luxury Catamaran</p>
               <div class="yacht-meta">
                 <span class="yacht-chip">13 Guests</span>
                 <span class="yacht-chip">From $850/hr</span>
@@ -76,7 +72,7 @@
             <div class="yacht-info">
               <span class="yacht-tier">Premium</span>
               <h3 class="yacht-title">Fountaine Pajot</h3>
-              <p class="yacht-subtitle">40 Ft Sailing Catamaran</p>
+              <p class="yacht-subtitle">57 Ft Sailing Catamaran</p>
               <div class="yacht-meta">
                 <span class="yacht-chip">13 Guests</span>
                 <span class="yacht-chip">From $700/hr</span>
@@ -91,14 +87,14 @@
             <div class="yacht-info">
               <span class="yacht-tier">Premium</span>
               <h3 class="yacht-title">Savannah</h3>
-              <p class="yacht-subtitle">48 Ft Luxury Motor Yacht</p>
+              <p class="yacht-subtitle">58 Ft Luxury Motor Yacht</p>
               <div class="yacht-meta">
                 <span class="yacht-chip">13 Guests</span>
                 <span class="yacht-chip">From $650/hr</span>
               </div>
             </div>
           </a>
-          <a class="yacht-card tier-sandbar" href="/yacht/formula-40-pc/">
+          <a class="yacht-card tier-sandbar" href="/yacht/formula-40pc/">
             <div class="yacht-media">
               <img class="yacht-image" src="/assets/imgs/Formula40PC/Formula01.webp" alt="Formula 40PC">
               <span class="yacht-ribbon">Sandbar</span>
@@ -120,8 +116,8 @@
             </div>
             <div class="yacht-info">
               <span class="yacht-tier">Sandbar</span>
-              <h3 class="yacht-title">Greenline 45</h3>
-              <p class="yacht-subtitle">45 Ft Eco Cruiser</p>
+              <h3 class="yacht-title">Greenline</h3>
+              <p class="yacht-subtitle">37 Ft Eco Cruiser</p>
               <div class="yacht-meta">
                 <span class="yacht-chip">13 Guests</span>
                 <span class="yacht-chip">From $500/hr</span>
@@ -165,8 +161,8 @@
             </div>
             <div class="yacht-info">
               <span class="yacht-tier">Sandbar</span>
-              <h3 class="yacht-title">Rinker 260</h3>
-              <p class="yacht-subtitle">26 Ft Cabin Cruiser</p>
+              <h3 class="yacht-title">Rinker Q3</h3>
+              <p class="yacht-subtitle">24 Ft Cabin Cruiser</p>
               <div class="yacht-meta">
                 <span class="yacht-chip">6 Guests</span>
                 <span class="yacht-chip">From $200/hr</span>
@@ -225,11 +221,11 @@
     </section>
 
     <section class="home-quick-links" aria-label="Charter categories">
-      <a class="home-quick-link" href="/services/learn-to-sail/"><span>Sail</span></a>
-      <a class="home-quick-link" href="/services/cruise/"><span>Cruise</span></a>
-      <a class="home-quick-link" href="/services/watersports/"><span>Watersports</span></a>
-      <a class="home-quick-link" href="/services/day-trips/"><span>Fish</span></a>
-      <a class="home-quick-link" href="/services/millionaires-row-tour/"><span>Tour</span></a>
+      <a class="home-quick-link" href="/services/learn-to-sail/"><span class="home-quick-icon">S</span><strong>Sail</strong><em>Private sailing charters</em></a>
+      <a class="home-quick-link" href="/services/cruise/"><span class="home-quick-icon">C</span><strong>Cruise</strong><em>Easygoing days on the water</em></a>
+      <a class="home-quick-link" href="/services/watersports/"><span class="home-quick-icon">W</span><strong>Watersports</strong><em>Active charters and add-ons</em></a>
+      <a class="home-quick-link" href="/services/day-trips/"><span class="home-quick-icon">F</span><strong>Fish</strong><em>Day trips and offshore time</em></a>
+      <a class="home-quick-link" href="/services/millionaires-row-tour/"><span class="home-quick-icon">T</span><strong>Tour</strong><em>Guided Fort Lauderdale routes</em></a>
     </section>
 
     <section class="home-tier-banner" aria-labelledby="home-tier-title">
@@ -646,30 +642,39 @@ floor.</p></article>
             in hand, these boats deliver maximum enjoyment with minimal fuss.</p>
         <div class="home-yacht-features">
           <article class="home-yacht-feature">
-            <img src="/assets/imgs/Axopar/Axopar01.webp" alt="Axopar 37 XC Cross Cabin">
-            <div>
+            <div class="home-yacht-feature__media">
+              <img src="/assets/imgs/Axopar/Axopar01.webp" alt="Axopar 37 XC Cross Cabin">
+            </div>
+            <div class="home-yacht-feature__copy">
               <p class="home-kicker">Sandbar</p>
               <h3>Axopar 37 XC</h3>
-              <p>The Axopar is built for efficient cruising, sandbar stops, and comfortable Fort Lauderdale day trips with a sleek adventure profile.</p>
-              <a href="/yacht/axopar/">Learn More</a>
+              <p>The Axopar 37 XC Cross Cabin is a sleek and sophisticated vessel that combines luxury with versatility on the waters of Fort Lauderdale. At 37 feet, this premium day cruiser offers a perfect balance of indoor and outdoor space. It features a revolutionary cross-cabin design that provides both weather protection and an immersive boating experience.</p>
+              <p>Cruising through the waters of Ft. Lauderdale becomes an elevated experience aboard the Axopar 37 XC. Whether navigating the New River&rsquo;s winding channels, exploring Millionaire&rsquo;s Row, or stopping at a sandbar, this vessel delivers exceptional performance and comfort. Its advanced hull design ensures a smooth ride even in choppy conditions.</p>
+              <p><strong><a href="/yacht/axopar/">Learn More</a></strong></p>
             </div>
           </article>
-          <article class="home-yacht-feature">
-            <img src="/assets/imgs/Formula40PC/Formula01.webp" alt="Formula 40 PC yacht">
-            <div>
+          <article class="home-yacht-feature is-reversed">
+            <div class="home-yacht-feature__media">
+              <img src="/assets/imgs/Formula40PC/Formula01.webp" alt="Formula 40 PC yacht">
+            </div>
+            <div class="home-yacht-feature__copy">
               <p class="home-kicker">Sandbar</p>
               <h3>Formula 40PC</h3>
-              <p>The Formula 40PC gives day groups a comfortable cruiser layout with strong deck space, cabin amenities, and easy sandbar access.</p>
-              <a href="/yacht/formula-40-pc/">Learn More</a>
+              <p>Take on the waters of Fort Lauderdale with our Formula 40 PC yacht charter. This high-performance cruiser offers the perfect balance of speed, comfort, and versatility, making it ideal for a variety of on-the-water experiences. Whether you&rsquo;re looking to explore the scenic intercoastal, anchor at a sandbar for a fun-filled afternoon, or embark on a high-speed thrill ride along the Atlantic coast, the Formula 40 PC delivers an unforgettable adventure.</p>
+              <p>Its sleek design and powerful engine make it a great choice for those who want to maximize their time on the water. For a more relaxed experience, tour through Fort Lauderdale&rsquo;s iconic waterways, taking in the beautiful skyline and waterfront mansions. The spacious cockpit and wraparound seating provide ample space for lounging, while the shaded hardtop ensures comfort even on the sunniest days.</p>
+              <p><strong><a href="/yacht/formula-40pc/">Learn More</a></strong></p>
             </div>
           </article>
           <article class="home-yacht-feature">
-            <img src="/assets/imgs/ChrisCraft/Chriscraft01.webp" alt="Chris Craft boat rental">
-            <div>
+            <div class="home-yacht-feature__media">
+              <img src="/assets/imgs/ChrisCraft/Chriscraft01.webp" alt="Chris Craft boat rental">
+            </div>
+            <div class="home-yacht-feature__copy">
               <p class="home-kicker">Sandbar</p>
               <h3>Chris Craft</h3>
-              <p>The Chris Craft is a compact, polished choice for smaller groups that want a classic day boat feel on the Intracoastal.</p>
-              <a href="/yacht/chris-craft/">Learn More</a>
+              <p>Take on the waters of Fort Lauderdale with our Chris-Craft Catalina 26, a center console day cruiser that embodies timeless style, unmatched craftsmanship, and agile performance. Known for its iconic American heritage, Chris-Craft delivers a yachting experience that turns heads at the dock and performs with confidence offshore. From its hand-finished teak accents to its Midnight Blue hull and rich ivory upholstery, every detail speaks to decades of refined boatbuilding.</p>
+              <p>This yacht is as photogenic as it is practical, making it an ideal choice for elevated leisure on the water. The Catalina 26&rsquo;s deep-V hull and powerful outboard setup make it perfect for zipping between sandbars, waterfront restaurants, and scenic stretches of the Intracoastal, all while riding in unmistakable luxury.</p>
+              <p><strong><a href="/yacht/chris-craft/">Learn More</a></strong></p>
             </div>
           </article>
         </div>
@@ -740,7 +745,7 @@ floor.</p></article>
                 <a href="/contact/">Contact</a>
             </div>
             <div class="footer-copy">
-                <p>A.R.E Industries, Inc DBA Flamingo Yacht Charters &copy; 2026. All Rights Reserved. 2665 S. Bayshore Dr. Suite 220, Miami, FL 33133</p>
+                <p>Flamingo Industries, Inc DBA Flamingo Yacht Charters &copy; 2026. All Rights Reserved. 2665 S. Bayshore Dr. Suite 220, Miami, FL 33133</p>
             </div>
         </div>
     </footer>
