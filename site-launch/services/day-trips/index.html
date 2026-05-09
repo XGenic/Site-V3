@@ -53,6 +53,8 @@
         <div class="content-grid">
           <div class="left-stack">
             <article class="panel left" aria-label="Service details">
+              <div class="service-intro-booking">
+                <div class="service-intro-copy">
               <div class="kicker">Fort Lauderdale Activity</div>
 <p>Fort Lauderdale is unsurprisingly a top travel destination for
 most. Its location along the warm Atlantic waters and close proximity to
@@ -70,6 +72,10 @@ past with landmarks such as the <a href="https://stranahanhouse.org/" target="_b
 individuals in the country. At the end of <a href="/services/tours/">Millionaires</a> Row, we enter the
  Intracoastal, where your whole-day boat charter in Fort Lauderdale and
 custom itinerary can begin.</p>
+
+                </div>
+              </div>
+
               <section class="itinerary-block" aria-label="Sample service itineraries" data-service-itinerary></section>
 
               <section class="boat-section" aria-labelledby="boat-section-title" data-service-boats></section>
@@ -119,199 +125,430 @@ custom itinerary can begin.</p>
 
           <script>
 window.servicePageConfig = {
-  bestFor: ["Bachelorettes", "Sandbar", "Photos", "Celebrations"],
-  itinerary: {
-    kicker: "Example Itinerary",
-    title: "Shape The Day Around Your Group",
-    tabsLabel: "Itinerary durations",
-    items: [
+  "bestFor": [
+    "Bachelorettes",
+    "Sandbar",
+    "Photos",
+    "Celebrations"
+  ],
+  "itinerary": {
+    "kicker": "Example Itinerary",
+    "title": "Shape The Day Around Your Group",
+    "tabsLabel": "Itinerary durations",
+    "items": [
       {
-        label: "3 Hours",
-        stops: [
-          { title: "Board And Toast The Bride", text: "Settle in, connect your playlist, stage the first photos, and start the cruise with the group together." },
-          { title: "Cruise Millionaires Row", text: "See the New River, Las Olas, waterfront estates, and mega yachts while the crew handles the route." },
-          { title: "Quick Sandbar Or Swim Stop", text: "Weather and route permitting, anchor for a short float, swim, or lounge session before returning." }
+        "label": "3 Hours",
+        "stops": [
+          {
+            "title": "Board And Toast The Bride",
+            "text": "Settle in, connect your playlist, stage the first photos, and start the cruise with the group together."
+          },
+          {
+            "title": "Cruise Millionaires Row",
+            "text": "See the New River, Las Olas, waterfront estates, and mega yachts while the crew handles the route."
+          },
+          {
+            "title": "Quick Sandbar Or Swim Stop",
+            "text": "Weather and route permitting, anchor for a short float, swim, or lounge session before returning."
+          }
         ]
       },
       {
-        label: "4 Hours",
-        stops: [
-          { title: "Board And Decorate", text: "Load drinks, snacks, hats, floats, and essentials so the boat feels ready before departure." },
-          { title: "Sightsee Through Fort Lauderdale", text: "Cruise the New River, Port Everglades, and the Intracoastal for a full tour-style start." },
-          { title: "Anchor For The Party", text: "Spend meaningful time at the sandbar or a calm swim area with music, floats, and photos.", isNew: true },
-          { title: "Return Cruise", text: "Wrap the day with waterfront views and a relaxed ride back to the dock." }
+        "label": "4 Hours",
+        "stops": [
+          {
+            "title": "Board And Decorate",
+            "text": "Load drinks, snacks, hats, floats, and essentials so the boat feels ready before departure."
+          },
+          {
+            "title": "Sightsee Through Fort Lauderdale",
+            "text": "Cruise the New River, Port Everglades, and the Intracoastal for a full tour-style start."
+          },
+          {
+            "title": "Anchor For The Party",
+            "text": "Spend meaningful time at the sandbar or a calm swim area with music, floats, and photos.",
+            "isNew": true
+          },
+          {
+            "title": "Return Cruise",
+            "text": "Wrap the day with waterfront views and a relaxed ride back to the dock."
+          }
         ]
       },
       {
-        label: "6 Hours",
-        stops: [
-          { title: "Start With A Scenic Cruise", text: "Ease into the day with sightseeing, drinks, music, and group photos around Fort Lauderdale." },
-          { title: "Long Sandbar Session", text: "Anchor for the main celebration with more time for swimming, floating, and relaxing on deck.", isNew: true },
-          { title: "Waterfront Lunch Or Catering", text: "Add a restaurant stop, catered platters, or delivered snacks depending on the group's plan.", isNew: true },
-          { title: "Golden Hour Return", text: "Cruise back through the Intracoastal with enough time to reset before the evening plans." }
+        "label": "6 Hours",
+        "stops": [
+          {
+            "title": "Start With A Scenic Cruise",
+            "text": "Ease into the day with sightseeing, drinks, music, and group photos around Fort Lauderdale."
+          },
+          {
+            "title": "Long Sandbar Session",
+            "text": "Anchor for the main celebration with more time for swimming, floating, and relaxing on deck.",
+            "isNew": true
+          },
+          {
+            "title": "Waterfront Lunch Or Catering",
+            "text": "Add a restaurant stop, catered platters, or delivered snacks depending on the group's plan.",
+            "isNew": true
+          },
+          {
+            "title": "Golden Hour Return",
+            "text": "Cruise back through the Intracoastal with enough time to reset before the evening plans."
+          }
         ]
       }
     ]
   },
-  boats: {
-    kicker: "Choose Your Boat",
-    title: "Day Trips Options",
-    filtersLabel: "Boat tiers",
-    filters: [
-      { key: "all", label: "All" },
-      { key: "sandbar", label: "Sandbar Boats" },
-      { key: "standard", label: "Standard Yachts" },
-      { key: "premium", label: "Premium Yachts" }
+  "boats": {
+    "kicker": "Choose Your Boat",
+    "title": "Day Trips Options",
+    "filtersLabel": "Boat tiers",
+    "filters": [
+      {
+        "key": "all",
+        "label": "All"
+      },
+      {
+        "key": "standard",
+        "label": "Standard"
+      },
+      {
+        "key": "premium",
+        "label": "Premium"
+      },
+      {
+        "key": "sandbar",
+        "label": "Sandbar"
+      },
+      {
+        "key": "luxury",
+        "label": "Luxury"
+      }
     ],
-    cards: [
+    "cards": [
       {
-        tier: "sandbar",
-        image: "/assets/imgs/ChrisCraft/Chriscraft01.webp",
-        alt: "Chris-Craft Catalina 26",
-        meta: ["Sandbar Boat", "Up to 6 guests"],
-        name: "Chris-Craft Catalina 26",
-        text: "Best for a smaller bride crew that wants a stylish, quick-moving day boat for sightseeing, sandbar time, and close-knit celebrating.",
-        rate: "From $750 / 3 hours",
-        details: ["Classic center-console day cruiser styling.", "Good fit for smaller groups and quick sandbar runs.", "Bluetooth audio, swim ladder, cooler, and bottled water."],
-        href: "/yacht/chris-craft/",
-        linkLabel: "View Chris-Craft Page"
+        "tier": "standard",
+        "image": "/assets/imgs/Fairline/Fairline1.webp",
+        "alt": "Fairline Targa 48",
+        "meta": [
+          "Standard Yacht",
+          "Up to 12 guests"
+        ],
+        "name": "Fairline Targa 48",
+        "text": "The storied European Fairline brand prides itself on being ahead of the curve in technology and comfort. The yacht charter features an open-air cockpit, allowing you and your guests to experience the crisp ocean breeze. If the sun becomes overbearing, step underneath our new canvas top or into our recently renovated cabin.",
+        "rate": "From $1,000 / 3 hours (1-6 Guests)",
+        "details": [
+          "Up to 12 guests",
+          "Standard Yacht",
+          "Starting rate: $1,000 / 3 hours (1-6 Guests)"
+        ],
+        "href": "/yacht/fairline/",
+        "linkLabel": "View Fairline",
+        "summary": "A comfortable standard yacht with open-air seating, shaded cockpit space, cabin amenities, and flexible cruising routes for groups."
       },
       {
-        tier: "sandbar",
-        image: "/assets/imgs/Formula40PC/Formula01.webp",
-        alt: "Formula 40 PC",
-        meta: ["Sandbar Boat", "Up to 12 guests"],
-        name: "Formula 40 PC",
-        text: "A high-performance cruiser with room to lounge, making it a flexible choice for groups that want speed, comfort, and a party-friendly deck.",
-        rate: "From $850 / 3 hours",
-        details: ["Wraparound cockpit seating and shaded hardtop.", "Good balance of cruising, sandbar time, and comfort.", "Cabin, bathroom, Bluetooth audio, cooler, and swim ladder."],
-        href: "/yacht/formula-40pc/",
-        linkLabel: "View Formula Page"
+        "tier": "standard",
+        "image": "/assets/imgs/Searay/Searay1.webp",
+        "alt": "Sea Ray 480 Sedan Bridge",
+        "meta": [
+          "Standard Yacht",
+          "Up to 12 guests"
+        ],
+        "name": "Sea Ray 480 Sedan Bridge",
+        "text": "The Sea Ray 480 Sedan Bridge is a luxurious cruiser with a spacious interior and many amenities. Whether it's the large stern or expansive bow, the Sea Ray has plenty of space on its exterior to lounge around and enjoy the crisp sea breeze and warm South Florida sun. Walk up to the second-floor bridge and gain a better view of your surroundings as you cruise through the area.",
+        "rate": "From $1,200 / 3 hours (1-6 Guests)",
+        "details": [
+          "Up to 12 guests",
+          "Standard Yacht",
+          "Starting rate: $1,200 / 3 hours (1-6 Guests)"
+        ],
+        "href": "/yacht/sea-ray/",
+        "linkLabel": "View Sea Ray",
+        "summary": "A spacious standard yacht with bridge seating, salon comfort, and room for sightseeing, swimming, and relaxed celebrations aboard."
       },
       {
-        tier: "standard",
-        image: "/assets/imgs/Fairline/Fairline1.webp",
-        alt: "Fairline Targa 48",
-        meta: ["Standard Yacht", "Up to 12 guests"],
-        name: "Fairline Targa 48",
-        text: "The all-purpose bachelorette yacht, with open-air seating, bow space for photos, and a large air-conditioned cabin when the group needs shade.",
-        rate: "From $1,000 / 3 hours",
-        details: ["Bow, stern, and cockpit seating for group photos.", "Air-conditioned cabin with three bedrooms and two bathrooms.", "Ice maker, fridge, designated coolers, and Bluetooth audio."],
-        href: "/yacht/fairline/",
-        linkLabel: "View Fairline Page"
+        "tier": "premium",
+        "image": "/assets/imgs/VG/VG%20(1).webp",
+        "alt": "VG PC 62",
+        "meta": [
+          "Premium Yacht",
+          "Up to 12 guests"
+        ],
+        "name": "VG PC 62",
+        "text": "When it released, the VG PC 62 became the first fully Italian-built powered catamaran and set a new standard for luxury cruising catamarans, combining Italian craftsmanship with modern performance. Designed for both relaxation and adventure, this spacious yacht offers an inviting aft deck with a dining area and plush seating, perfect for alfresco meals or lounging in the sun. Wide steps lead to the expansive flybridge, where guests can enjoy panoramic views, a wet bar, and ample shaded or sunlit seating.",
+        "rate": "From $1,750 / 3 hours (1-6 Guests)",
+        "details": [
+          "Up to 12 guests",
+          "Premium Yacht",
+          "Starting rate: $1,750 / 3 hours (1-6 Guests)"
+        ],
+        "href": "/yacht/vg/",
+        "linkLabel": "View VG PC 62",
+        "summary": "A premium power catamaran with wide gathering areas, flybridge views, and a polished feel for larger charter groups."
       },
       {
-        tier: "standard",
-        image: "/assets/imgs/Searay/Searay1.webp",
-        alt: "Sea Ray 480 Sedan Bridge",
-        meta: ["Standard Yacht", "Up to 12 guests"],
-        name: "Sea Ray 480 Sedan Bridge",
-        text: "A comfortable yacht for groups that want generous interior space, wraparound windows, and a home-base feel between outdoor celebration moments.",
-        rate: "From $1,200 / 3 hours",
-        details: ["Large bow, stern, saloon, and bridge spaces.", "Three bedrooms, two bathrooms, and an air-conditioned cabin.", "Great fit for groups that value shade and interior comfort."],
-        href: "/yacht/sea-ray/",
-        linkLabel: "View Sea Ray Page"
+        "tier": "premium",
+        "image": "/assets/imgs/FP/FP1.webp",
+        "alt": "Fountaine Pajot Sonya 57",
+        "meta": [
+          "Premium Yacht",
+          "Up to 12 guests"
+        ],
+        "name": "Fountaine Pajot Sonya 57",
+        "text": "Take on the waters of Fort Lauderdale with our Fountaine Pajot yacht charter. This sailing yacht is more than capable of doing it all, ensuring that your day on the water will be one that you soon won't forget. For those who want to lounge on the water, a trip through the intercoastal is a beautiful way to see Fort Lauderdale and the surrounding areas from a point of view that isn't typically seen. You can finish the day off with a private dinner cruise on the yacht or choose to stop by one of our popular waterfront restaurants.",
+        "rate": "From $1,650 / 3 hours (1-6 Guests)",
+        "details": [
+          "Up to 12 guests",
+          "Premium Yacht",
+          "Starting rate: $1,650 / 3 hours (1-6 Guests)"
+        ],
+        "href": "/yacht/fountaine-pajot/",
+        "linkLabel": "View Fountaine Pajot",
+        "summary": "A spacious sailing catamaran with steady cruising, broad deck space, and an easygoing premium feel for social charters."
       },
       {
-        tier: "premium",
-        image: "/assets/imgs/FP/FP1.webp",
-        alt: "Fountaine Pajot Sonya 57",
-        meta: ["Premium Yacht", "Up to 12 guests"],
-        name: "Fountaine Pajot Sonya 57",
-        text: "A spacious sailing catamaran with broad outdoor lounge areas, a large stern dining space, and plenty of room for an elevated celebration.",
-        rate: "From $1,650 / 3 hours",
-        details: ["Nearly 60-foot catamaran platform with wide lounge zones.", "Large living room, galley, full-size fridge, bedrooms, and bathrooms.", "Strong option for groups prioritizing space and stability."],
-        href: "/yacht/fountaine-pajot/",
-        linkLabel: "View Fountaine Pajot Page"
+        "tier": "premium",
+        "image": "/assets/imgs/Savannah/Savannah1.webp",
+        "alt": "Savannah 54",
+        "meta": [
+          "Premium Yacht",
+          "Up to 12 guests"
+        ],
+        "name": "Savannah 54",
+        "text": "Step aboard the Savannah 54, a beautifully crafted express cruiser that blends refined style with spacious comfort, creating a perfect setting for both entertaining and relaxation on the water. With its wide beam and intelligently designed layout, this 54-foot yacht delivers the feel of a much larger vessel, ideal for those seeking a roomy, comfortable, and elegant escape along Fort Lauderdale's scenic waterways.",
+        "rate": "From $1,400 / 3 hours (1-6 Guests)",
+        "details": [
+          "Up to 12 guests",
+          "Premium Yacht",
+          "Starting rate: $1,400 / 3 hours (1-6 Guests)"
+        ],
+        "href": "/yacht/savannah/",
+        "linkLabel": "View Savannah",
+        "summary": "A refined premium yacht with generous lounge areas, comfortable cabin space, and an elegant feel for on-water celebrations."
       },
       {
-        tier: "premium",
-        image: "/assets/imgs/VG/VG%20(1).webp",
-        alt: "VG PC 62",
-        meta: ["Premium Yacht", "Up to 12 guests"],
-        name: "VG PC 62",
-        text: "A luxury power catamaran with expansive deck space, multiple lounge areas, and a polished layout for a more upscale bachelorette charter.",
-        rate: "From $1,750 / 3 hours",
-        details: ["Over 60 feet with broad deck and flybridge spaces.", "Modern saloon, galley, private staterooms, and bathrooms.", "Best fit for groups wanting a refined catamaran party setting."],
-        href: "/yacht/vg/",
-        linkLabel: "View VG Page"
+        "tier": "sandbar",
+        "image": "/assets/imgs/Formula40PC/Formula01.webp",
+        "alt": "Formula 40 PC",
+        "meta": [
+          "Sandbar Boat",
+          "Up to 12 guests"
+        ],
+        "name": "Formula 40 PC",
+        "text": "Take on the waters of Fort Lauderdale with our Formula 40 PC yacht charter. This high-performance cruiser offers the perfect balance of speed, comfort, and versatility, making it ideal for a variety of on-the-water experiences. Whether you're looking to explore the scenic intercoastal, anchor at a sandbar for a fun-filled afternoon, or embark on a high-speed thrill ride along the Atlantic coast, the Formula 40 PC delivers an unforgettable adventure.",
+        "rate": "From $700 / 2 hours (1-6 Guests)",
+        "details": [
+          "Up to 12 guests",
+          "Sandbar Boat",
+          "Starting rate: $700 / 2 hours (1-6 Guests)"
+        ],
+        "href": "/yacht/formula-40pc/",
+        "linkLabel": "View Formula 40 PC",
+        "summary": "A versatile cruiser for sandbar days, sightseeing, swimming, and relaxed group time with plenty of comfortable seating."
+      },
+      {
+        "tier": "sandbar",
+        "image": "/assets/imgs/Greenline/Greenline01.webp",
+        "alt": "Greenline NEO",
+        "meta": [
+          "Sandbar Boat",
+          "Up to 6 guests"
+        ],
+        "name": "Greenline NEO",
+        "text": "The Greenline NEO is Greenline's most nimble offering. This sleek European 37-foot vessel can absolutely cut through the waters of Fort Lauderdale with its two 300-horsepower Mercury outboard engines. When designing the NEO, Greenline made sure to have as much space as possible, allowing the NEO to offer some of the most spacious interiors of any boat in its class.",
+        "rate": "From $850 / 2 hours",
+        "details": [
+          "Up to 6 guests",
+          "Sandbar Boat",
+          "Starting rate: $850 / 2 hours"
+        ],
+        "href": "/yacht/greenline/",
+        "linkLabel": "View Greenline",
+        "summary": "A modern day boat with efficient cruising, open seating, and enough space for easy no-captain rental routes locally."
+      },
+      {
+        "tier": "sandbar",
+        "image": "/assets/imgs/Axopar/Axopar01.webp",
+        "alt": "Axopar 37 XC Cross Cabin",
+        "meta": [
+          "Sandbar Boat",
+          "Up to 9 guests"
+        ],
+        "name": "Axopar 37 XC Cross Cabin",
+        "text": "The Axopar 37 XC Cross Cabin is a sleek and sophisticated vessel that combines luxury with versatility on the waters of Fort Lauderdale. At 37 feet, this premium day cruiser offers a perfect balance of indoor and outdoor space. It features a revolutionary cross-cabin design that provides both weather protection and an immersive boating experience.",
+        "rate": "From $850 / 2 hours (Up to 5 Guests)",
+        "details": [
+          "Up to 9 guests",
+          "Sandbar Boat",
+          "Starting rate: $850 / 2 hours (Up to 5 Guests)"
+        ],
+        "href": "/yacht/axopar/",
+        "linkLabel": "View Axopar",
+        "summary": "A sleek cross-cabin day boat with fast cruising, weather protection, and flexible space for active Fort Lauderdale outings."
+      },
+      {
+        "tier": "sandbar",
+        "image": "/assets/imgs/ChrisCraft/Chriscraft01.webp",
+        "alt": "Chris-Craft Catalina 26",
+        "meta": [
+          "Sandbar Boat",
+          "Up to 6 guests"
+        ],
+        "name": "Chris-Craft Catalina 26",
+        "text": "Take on the waters of Fort Lauderdale with our Chris-Craft Catalina 26, a center console day cruiser that embodies timeless style, unmatched craftsmanship, and agile performance. Known for its iconic American heritage, Chris-Craft delivers a yachting experience that turns heads at the dock and performs with confidence offshore. From its hand-finished teak accents to its Midnight Blue hull and rich ivory upholstery, every detail speaks to decades of refined boatbuilding.",
+        "rate": "From $600 / 2 hours",
+        "details": [
+          "Up to 6 guests",
+          "Sandbar Boat",
+          "Starting rate: $600 / 2 hours"
+        ],
+        "href": "/yacht/chris-craft/",
+        "linkLabel": "View Chris-Craft",
+        "summary": "A compact premium day boat for smaller groups that want relaxed cruising, sandbar stops, and classic Chris-Craft styling."
+      },
+      {
+        "tier": "sandbar",
+        "image": "/assets/imgs/Rinker/Rinker01.webp",
+        "alt": "Rinker Q3",
+        "meta": [
+          "Sandbar Boat",
+          "Up to 6 guests"
+        ],
+        "name": "Rinker Q3",
+        "text": "The Rinker Q3 is a compact bowrider that is highly nimble as it cuts through the waters of Fort Lauderdale. Despite its smaller size, sitting at 25 feet, the Q3 features plenty of comfortable seating for you and your friends. The bow seats, which have been called \"hot-tub\" style seats, are extra deep to secure you to the boat better and offer more comfort.",
+        "rate": "From $350 / 2 hours",
+        "details": [
+          "Up to 6 guests",
+          "Sandbar Boat",
+          "Starting rate: $350 / 2 hours"
+        ],
+        "href": "/yacht/rinker/",
+        "linkLabel": "View Rinker",
+        "summary": "A nimble bowrider for smaller no-captain groups, with simple handling, comfortable seating, and an accessible rental price."
+      },
+      {
+        "tier": "sandbar",
+        "image": "/assets/imgs/Starcraft/Starcraft01.webp",
+        "alt": "Starcraft Marine Pontoon EX",
+        "meta": [
+          "Sandbar Boat",
+          "Up to 6 guests"
+        ],
+        "name": "Starcraft Marine Pontoon EX",
+        "text": "For those looking for a simple and accessible day on the water with friends, there are few better boats to choose than a pontoon. With plenty of space to move around it, it's the perfect vessel for large parties.",
+        "rate": "From $350 / 2 hours",
+        "details": [
+          "Up to 6 guests",
+          "Sandbar Boat",
+          "Starting rate: $350 / 2 hours"
+        ],
+        "href": "/yacht/starcraft/",
+        "linkLabel": "View Starcraft",
+        "summary": "A casual pontoon option with open deck space, simple handling, and a relaxed setup for easy days on the water."
+      },
+      {
+        "tier": "luxury",
+        "image": "/assets/imgs/Pardo/Pardo01.webp",
+        "alt": "Pardo 50",
+        "meta": [
+          "Luxury Yacht",
+          "Up to 12 guests"
+        ],
+        "name": "Pardo 50",
+        "text": "The Pardo 50 is a luxurious and sophisticated vessel that combines Italian craftsmanship with exceptional performance on the waters of Fort Lauderdale. At 50 feet, this premium yacht offers an impressive balance of elegant indoor spaces and expansive deck areas. It features a revolutionary open-concept design that provides both shelter from the elements and an immersive connection to the marine environment.",
+        "rate": "From $3,075 / 3 hours (1-6 Guests)",
+        "details": [
+          "Up to 12 guests",
+          "Luxury Yacht",
+          "Starting rate: $3,075 / 3 hours (1-6 Guests)"
+        ],
+        "href": "/yacht/pardo/",
+        "linkLabel": "View Pardo",
+        "summary": "A luxury walkaround yacht with refined finishes, open deck space, and a high-end feel for stylish private charters."
+      },
+      {
+        "tier": "luxury",
+        "image": "/assets/imgs/Sunreef/Sunreef01.webp",
+        "alt": "Sunreef Supreme 68 Power",
+        "meta": [
+          "Luxury Yacht",
+          "Up to 12 guests"
+        ],
+        "name": "Sunreef Supreme 68 Power",
+        "text": "When Sunreef released the Supreme 68 Power, it redefined what a luxury powercat could be, blending bold styling with advanced marine technology. This Sunreef, one of the most sophisticated editions of this model, pushes the boundaries with its sleek lines, impressive stability, and performance-driven design. Her expansive bow terrace, complete with a Jacuzzi and large sunbeds, invites guests to soak up the sea breeze under a wide sun awning.",
+        "rate": "From $5,500 / 4 Hours (Day Charter)",
+        "details": [
+          "Up to 12 guests",
+          "Luxury Yacht",
+          "Starting rate: $5,500 / 4 Hours (Day Charter)"
+        ],
+        "href": "/yacht/sunreef/",
+        "linkLabel": "View Sunreef",
+        "summary": "A luxury power catamaran with expansive decks, premium amenities, and a standout platform for upscale celebrations and day charters."
       }
     ]
   },
-  onboard: {
-    kicker: "On Board",
-    includedTitle: "What's Included",
-    included: ["Captain", "Fuel", "Bottled Water", "Cooler", "Bluetooth Speakers", "Swim Ladder", "Bathroom", "Cabin Access", "Bow Seating", "Safety Gear"],
-    optionalTitle: "Optional",
-    optional: [
-      { label: "Ice, Towels, Cups, Tableware", href: "https://store.flamingoyachtcharters.net/products/charter-essentials-package" },
-      { label: "Floating Mat", href: "https://store.flamingoyachtcharters.net/products/floating-mat" },
-      { label: "Lunch Platters", href: "https://store.flamingoyachtcharters.net/collections/food-beverage" },
-      { label: "Alcohol Pickup", href: "https://store.flamingoyachtcharters.net/products/total-wine-pickup" },
-      { label: "Fruit Platter", href: "https://store.flamingoyachtcharters.net/products/fruit-platter" },
-      { label: "Snorkel Gear", href: "https://store.flamingoyachtcharters.net/products/snorkeling-per-snorkel" },
-      { label: "Tubing", href: "https://store.flamingoyachtcharters.net/products/tubing" },
-      { label: "SeaBob", href: "https://store.flamingoyachtcharters.net/products/seabob-per-hour" },
-      { label: "Jetski", href: "https://store.flamingoyachtcharters.net/products/jetski-per-hour" },
-      { label: "Bachelorette Decor", href: "https://store.flamingoyachtcharters.net/products/bachelorette-package" }
+  "onboard": {
+    "kicker": "On Board",
+    "includedTitle": "What's Included",
+    "included": [
+      "Captain",
+      "Fuel",
+      "Bottled Water",
+      "Cooler",
+      "Bluetooth Speakers",
+      "Swim Ladder",
+      "Bathroom",
+      "Cabin Access",
+      "Bow Seating",
+      "Safety Gear"
+    ],
+    "optionalTitle": "Optional",
+    "optional": [
+      {
+        "label": "Ice, Towels, Cups, Tableware",
+        "href": "https://store.flamingoyachtcharters.net/products/charter-essentials-package"
+      },
+      {
+        "label": "Floating Mat",
+        "href": "https://store.flamingoyachtcharters.net/products/floating-mat"
+      },
+      {
+        "label": "Lunch Platters",
+        "href": "https://store.flamingoyachtcharters.net/collections/food-beverage"
+      },
+      {
+        "label": "Alcohol Pickup",
+        "href": "https://store.flamingoyachtcharters.net/products/total-wine-pickup"
+      },
+      {
+        "label": "Fruit Platter",
+        "href": "https://store.flamingoyachtcharters.net/products/fruit-platter"
+      },
+      {
+        "label": "Snorkel Gear",
+        "href": "https://store.flamingoyachtcharters.net/products/snorkeling-per-snorkel"
+      },
+      {
+        "label": "Tubing",
+        "href": "https://store.flamingoyachtcharters.net/products/tubing"
+      },
+      {
+        "label": "SeaBob",
+        "href": "https://store.flamingoyachtcharters.net/products/seabob-per-hour"
+      },
+      {
+        "label": "Jetski",
+        "href": "https://store.flamingoyachtcharters.net/products/jetski-per-hour"
+      },
+      {
+        "label": "Bachelorette Decor",
+        "href": "https://store.flamingoyachtcharters.net/products/bachelorette-package"
+      }
     ]
   },
-  sidebar: {
-    bookingTitle: "Day Trips Availability",
-    fareHarborSrc: "https://fareharbor.com/embeds/script/calendar/flamingoyachtcharters/items/?fallback=simple&full-items=yes&flow=860133",
-    pricing: {
-      title: "Bachelorette Boat Pricing",
-      note: "Rates are starting points from the current fleet pages. Final pricing can vary by boat, group size, route, and selected add-ons.",
-      columns: [
-        { key: "boat", label: "Boat" },
-        { key: "smallGroup", label: "1-6 Guests" },
-        { key: "largeGroup", label: "7-12 Guests" }
-      ],
-      groups: [
-        {
-          label: "3 Hours",
-          rows: [
-            { boat: "Chris-Craft", smallGroup: "$750", largeGroup: "Not available" },
-            { boat: "Formula 40 PC", smallGroup: "$850", largeGroup: "$1,075" },
-            { boat: "Fairline", smallGroup: "$1,000", largeGroup: "$1,225" },
-            { boat: "Sea Ray", smallGroup: "$1,200", largeGroup: "$1,425" },
-            { boat: "Fountaine Pajot", smallGroup: "$1,650", largeGroup: "$1,875" },
-            { boat: "VG PC 62", smallGroup: "$1,750", largeGroup: "$1,975" }
-          ]
-        },
-        {
-          label: "4 Hours",
-          rows: [
-            { boat: "Chris-Craft", smallGroup: "$900", largeGroup: "Not available" },
-            { boat: "Formula 40 PC", smallGroup: "$950", largeGroup: "$1,250" },
-            { boat: "Fairline", smallGroup: "$1,150", largeGroup: "$1,450" },
-            { boat: "Sea Ray", smallGroup: "$1,400", largeGroup: "$1,700" },
-            { boat: "Fountaine Pajot", smallGroup: "$2,200", largeGroup: "$2,500" },
-            { boat: "VG PC 62", smallGroup: "$2,300", largeGroup: "$2,600" }
-          ]
-        },
-        {
-          label: "6 Hours",
-          rows: [
-            { boat: "Chris-Craft", smallGroup: "$1,200", largeGroup: "Not available" },
-            { boat: "Formula 40 PC", smallGroup: "$1,200", largeGroup: "$1,650" },
-            { boat: "Fairline", smallGroup: "$1,400", largeGroup: "$1,850" },
-            { boat: "Sea Ray", smallGroup: "$2,250", largeGroup: "$2,700" },
-            { boat: "Fountaine Pajot", smallGroup: "$3,200", largeGroup: "$3,650" },
-            { boat: "VG PC 62", smallGroup: "$3,450", largeGroup: "$3,900" }
-          ]
-        }
-      ]
-    },
-    addon: {
-      href: "https://store.flamingoyachtcharters.net/",
-      imageSrc: "/assets/imgs/Addon-CTA.webp",
-      ariaLabel: "View available add-ons in a new tab"
-    },
-    packages: {
-      excludeTitles: ["Bachelorette Package"]
-    }
-  }
+  "noSidebar": true
 };
           </script>
           <script src="/services/service-page-renderer.js"></script>

@@ -1,5 +1,7 @@
 (function () {
   const config = window.servicePageConfig || {};
+  document.querySelector('.content-grid')?.classList.add('content-grid--no-sidebar');
+
   const escapeHtml = (value) => String(value ?? '')
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
@@ -67,8 +69,8 @@
             <img src="${escapeHtml(boat.image)}" alt="${escapeHtml(boat.alt || boat.name)}" loading="lazy" width="2560" height="1440" />
             <div class="boat-card-body">
               <div class="boat-meta">${(boat.meta || []).map((item) => `<span>${escapeHtml(item)}</span>`).join('')}</div>
-              <h4>${escapeHtml(boat.name)}</h4>
-              <p>${escapeHtml(boat.text)}</p>
+              <h4 title="${escapeHtml(boat.name)}">${escapeHtml(boat.name)}</h4>
+              <p class="boat-card-copy">${escapeHtml(boat.summary || boat.text)}</p>
               <div class="boat-rate">${escapeHtml(boat.rate)}</div>
               <button class="boat-detail-toggle" type="button" aria-expanded="false" aria-controls="${detailId}" data-boat-toggle>View Details</button>
               <div class="boat-detail" id="${detailId}" hidden>
