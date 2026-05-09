@@ -101,5 +101,18 @@
     </div>
   `);
 
+  const itineraryBlock = document.querySelector('[data-service-itinerary]');
+  const contactCard = document.querySelector('.left-stack > .contact-card');
+  if (itineraryBlock && contactCard && !itineraryBlock.closest('.itinerary-contact-row')) {
+    const row = document.createElement('div');
+    row.className = 'itinerary-contact-row';
+    row.setAttribute('data-itinerary-contact-row', '');
+    itineraryBlock.parentNode.insertBefore(row, itineraryBlock);
+    row.appendChild(itineraryBlock);
+    contactCard.classList.remove('panel');
+    contactCard.classList.add('contact-card--inline');
+    row.appendChild(contactCard);
+  }
+
   window.pageSidebar = config.sidebar || {};
 })();
