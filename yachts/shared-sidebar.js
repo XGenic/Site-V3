@@ -22,7 +22,7 @@
     },
     addon: {
       href: 'https://store.flamingoyachtcharters.net/',
-      imageSrc: 'imgs/Addon-CTA.webp',
+      imageSrc: '/assets/imgs/Addon-CTA.webp',
       ariaLabel: 'View available add-ons in a new tab',
     },
     packages: {

@@ -288,18 +288,18 @@
   setupContactForms();
 
   const sharedBottomGalleryImages = [
-    'imgs/General/General01.webp',
-    'imgs/General/General02.webp',
-    'imgs/General/General03.webp',
-    'imgs/General/General04.webp',
-    'imgs/General/General05.webp',
-    'imgs/General/General06.webp',
-    'imgs/General/General08.webp',
-    'imgs/General/General10.webp',
-    'imgs/General/General11.webp',
-    'imgs/General/General12.webp',
-    'imgs/General/General13.webp',
-    'imgs/General/General14.webp'
+    '/assets/imgs/General/General01.webp',
+    '/assets/imgs/General/General02.webp',
+    '/assets/imgs/General/General03.webp',
+    '/assets/imgs/General/General04.webp',
+    '/assets/imgs/General/General05.webp',
+    '/assets/imgs/General/General06.webp',
+    '/assets/imgs/General/General08.webp',
+    '/assets/imgs/General/General10.webp',
+    '/assets/imgs/General/General11.webp',
+    '/assets/imgs/General/General12.webp',
+    '/assets/imgs/General/General13.webp',
+    '/assets/imgs/General/General14.webp'
   ];
 
   const populateBottomGallery = () => {
