@@ -1113,6 +1113,52 @@ a:hover{ text-decoration: underline; }
   border-top: 1px solid rgba(14,18,22,.14);
 }
 
+.book-now-page{
+  width: 100%;
+  padding: 18px clamp(10px, 1.6vw, 24px) 48px;
+}
+
+.book-now-shell{
+  width: min(100%, var(--home-max));
+  margin-inline: auto;
+}
+
+.book-now-shell{
+  padding: clamp(8px, 1.4vw, 18px);
+  border: 1px solid rgba(14,18,22,.10);
+  border-radius: 8px;
+  background: rgba(255,255,255,.82);
+  box-shadow: var(--home-shadow-soft);
+}
+
+.book-now-embed{
+  width: 100%;
+  min-height: 2600px;
+  overflow: visible;
+}
+
+.book-now-embed iframe,
+.book-now-embed .fareharbor-calendar-wrap iframe{
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  min-height: 2600px;
+  border: 0 !important;
+  background: transparent;
+}
+
+.book-now-embed noscript p{
+  margin: 0;
+  color: var(--home-muted);
+  font-size: 18px;
+  text-align: center;
+}
+
+.book-now-embed noscript a{
+  color: var(--home-blue);
+  font-weight: 700;
+}
+
 @media (max-width: 1100px){
   .home-intro-feature,
   .home-contact-inner,
@@ -1249,5 +1295,19 @@ a:hover{ text-decoration: underline; }
 
   .cta-section .btn-outline{
     margin: 12px 0 0;
+  }
+
+  .book-now-page{
+    padding: 10px 8px 36px;
+  }
+
+  .book-now-shell{
+    padding: 6px;
+  }
+
+  .book-now-embed,
+  .book-now-embed iframe,
+  .book-now-embed .fareharbor-calendar-wrap iframe{
+    min-height: 4600px;
   }
 }

@@ -9,13 +9,24 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Playfair+Display:wght@400&display=swap">
   <link rel="stylesheet" href="/css/header.css">
+  <link rel="stylesheet" href="/css/main.css?v=book-20260509b">
 </head>
 <body>
   <div data-include="site-header"></div>
 
-  <main>
-    <!-- FareHarbor item grid of flow #860133 -->
-    <script src="https://fareharbor.com/embeds/script/items/flamingoyachtcharters/?full-items=yes&fallback=simple&flow=860133"></script>
+  <main class="book-now-page">
+    <section class="book-now-shell" aria-label="FareHarbor booking widget">
+      <div class="book-now-embed">
+        <!-- FareHarbor item grid of flow #860133 -->
+        <script src="https://fareharbor.com/embeds/script/items/flamingoyachtcharters/?full-items=yes&fallback=simple&flow=860133"></script>
+        <noscript>
+          <p>
+            Online booking requires JavaScript.
+            <a href="https://fareharbor.com/embeds/book/flamingoyachtcharters/?full-items=yes&flow=860133" target="_blank" rel="noopener noreferrer">Open the secure booking page</a>.
+          </p>
+        </noscript>
+      </div>
+    </section>
   </main>
 
   <script src="/shared-header.js"></script>
