@@ -11,6 +11,7 @@
     const mobileMenu = document.getElementById('mobileMenu');
     const mobileClose = document.getElementById('mobileClose');
     if (!mobileToggle || !mobileMenu) return;
+    if (mobileToggle.dataset.sharedHeaderBound === 'true') return;
 
     const setMobileMenu = (open) => {
       if (open) mobileMenu.removeAttribute('hidden');
@@ -280,7 +281,7 @@
   const year = document.getElementById('year');
   if (year) year.textContent = String(new Date().getFullYear());
 
-  // Mobile menu
+  // Mobile menu fallback for standalone pages without the shared header initializer.
   setupMobileMenu();
   setupAddonsPanels();
   setupAccordionGroups();

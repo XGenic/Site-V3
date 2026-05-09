@@ -19,6 +19,9 @@
     if (!mobileMenu || !mobileToggle || !mobileClose) {
       return;
     }
+    if (mobileToggle.dataset.sharedHeaderBound === "true") {
+      return;
+    }
 
     const setMenuState = (isOpen) => {
       mobileMenu.hidden = !isOpen;
