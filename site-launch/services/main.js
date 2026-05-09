@@ -239,18 +239,18 @@
   setupBoatSelection();
 
   const sharedBottomGalleryImages = [
-    '../imgs/General/General01.webp',
-    '../imgs/General/General02.webp',
-    '../imgs/General/General03.webp',
-    '../imgs/General/General04.webp',
-    '../imgs/General/General05.webp',
-    '../imgs/General/General06.webp',
-    '../imgs/General/General08.webp',
-    '../imgs/General/General10.webp',
-    '../imgs/General/General11.webp',
-    '../imgs/General/General12.webp',
-    '../imgs/General/General13.webp',
-    '../imgs/General/General14.webp'
+    '/assets/imgs/General/General01.webp',
+    '/assets/imgs/General/General02.webp',
+    '/assets/imgs/General/General03.webp',
+    '/assets/imgs/General/General04.webp',
+    '/assets/imgs/General/General05.webp',
+    '/assets/imgs/General/General06.webp',
+    '/assets/imgs/General/General08.webp',
+    '/assets/imgs/General/General10.webp',
+    '/assets/imgs/General/General11.webp',
+    '/assets/imgs/General/General12.webp',
+    '/assets/imgs/General/General13.webp',
+    '/assets/imgs/General/General14.webp'
   ];
 
   const populateBottomGallery = () => {
@@ -359,6 +359,47 @@
     const thumbs = Array.from(document.querySelectorAll('#galleryGrid .thumb'));
     const idx = thumbs.indexOf(t);
     openLb(getBottomGalleryImages(), idx >= 0 ? idx : 0);
+  });
+
+  document.querySelectorAll('[data-service-media-slider]').forEach((slider) => {
+    const track = slider.querySelector('[data-service-slider-track]');
+    const prevButton = slider.querySelector('[data-service-slider-prev]');
+    const nextButton = slider.querySelector('[data-service-slider-next]');
+    const slides = Array.from(slider.querySelectorAll('.service-media-slider__slide img'));
+    if (!track || !slides.length) return;
+
+    const scrollSlider = (direction) => {
+      const maxScrollLeft = Math.max(track.scrollWidth - track.clientWidth, 0);
+      const tolerance = 8;
+      const atStart = track.scrollLeft <= tolerance;
+      const atEnd = track.scrollLeft >= maxScrollLeft - tolerance;
+
+      if (direction > 0 && atEnd) {
+        track.scrollTo({ left: 0, behavior: 'smooth' });
+        return;
+      }
+
+      if (direction < 0 && atStart) {
+        track.scrollTo({ left: maxScrollLeft, behavior: 'smooth' });
+        return;
+      }
+
+      track.scrollBy({ left: direction * track.clientWidth, behavior: 'smooth' });
+    };
+
+    prevButton?.addEventListener('click', () => scrollSlider(-1));
+    nextButton?.addEventListener('click', () => scrollSlider(1));
+
+    track.addEventListener('click', (e) => {
+      const img = e.target.closest('.service-media-slider__slide img');
+      if (!img) return;
+      const idx = slides.indexOf(img);
+      const galleryItems = slides.map((item) => ({
+        src: item.currentSrc || item.src,
+        label: item.alt || 'Photo'
+      }));
+      openLb(galleryItems, idx >= 0 ? idx : 0);
+    });
   });
 
   lbClose?.addEventListener('click', closeLb);
