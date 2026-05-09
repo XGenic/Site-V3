@@ -93,7 +93,7 @@ window.siteHeaderTemplate = `
         </div>
       </li>
 
-      <li><a href="/extras/">Add-Ons</a></li>
+      <li><a href="https://store.flamingoyachtcharters.net/" target="_blank" rel="noopener noreferrer">Add-Ons</a></li>
       <li><a href="/faq/">FAQ</a></li>
       <li><a href="/contact/">Contact</a></li>
     </ul>
@@ -180,7 +180,7 @@ window.siteHeaderTemplate = `
         </div>
 
         <a href="/yacht-charter-discounts/">Offers</a>
-        <a href="/extras/">Add-Ons</a>
+        <a href="https://store.flamingoyachtcharters.net/" target="_blank" rel="noopener noreferrer">Add-Ons</a>
         <a href="/contact/">Contact</a>
       </nav>
 
