@@ -290,18 +290,18 @@
   setupContactForms();
 
   const sharedBottomGalleryImages = [
-    '/assets/imgs/General/General01.webp',
-    '/assets/imgs/General/General02.webp',
-    '/assets/imgs/General/General03.webp',
-    '/assets/imgs/General/General04.webp',
-    '/assets/imgs/General/General05.webp',
-    '/assets/imgs/General/General06.webp',
-    '/assets/imgs/General/General08.webp',
-    '/assets/imgs/General/General10.webp',
-    '/assets/imgs/General/General11.webp',
-    '/assets/imgs/General/General12.webp',
-    '/assets/imgs/General/General13.webp',
-    '/assets/imgs/General/General14.webp'
+    '/site-launch/assets/imgs/General/General01.webp',
+    '/site-launch/assets/imgs/General/General02.webp',
+    '/site-launch/assets/imgs/General/General03.webp',
+    '/site-launch/assets/imgs/General/General04.webp',
+    '/site-launch/assets/imgs/General/General05.webp',
+    '/site-launch/assets/imgs/General/General06.webp',
+    '/site-launch/assets/imgs/General/General08.webp',
+    '/site-launch/assets/imgs/General/General10.webp',
+    '/site-launch/assets/imgs/General/General11.webp',
+    '/site-launch/assets/imgs/General/General12.webp',
+    '/site-launch/assets/imgs/General/General13.webp',
+    '/site-launch/assets/imgs/General/General14.webp'
   ];
 
   const populateBottomGallery = () => {
