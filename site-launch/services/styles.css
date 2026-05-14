@@ -2041,56 +2041,33 @@ footer{
   .service-media-slider__button--next{ right: 10px; }
   .mobile-menu-inner{ padding: 26px 20px 40px; }
   .navbar{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 100%;
-    gap: 0;
-    overflow: hidden;
-    padding: 16px 10px 22px;
-  }
-  .brand{
-    flex: 1 1 auto;
-    min-width: 0;
-    max-width: calc(100% - 56px);
-  }
-  .brand-link{
-    max-width: 100%;
-    min-width: 0;
-    overflow: hidden;
-  }
-  .mobile-header-actions{
-    display: flex;
-    flex: 0 0 48px;
-    width: 48px;
-    margin-left: 8px;
-    justify-content: flex-end;
-    gap: 0;
+    padding: 18px 12px 26px;
+    gap: 8px;
   }
   .brand-name{
-    display: block;
-    max-width: 100%;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    font-size: clamp(20px, 6vw, 28px);
+    font-size: 24px;
+    letter-spacing: .04em;
   }
   .brand-sub{
+    margin-left: 0;
     font-size: 9px;
-    max-width: 100%;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+  }
+  .mobile-header-actions{
+    gap: 8px;
   }
   .btn-book-mobile{
-    display: none !important;
+    padding: 11px 12px;
+    font-size: 12px;
+    letter-spacing: .18em;
   }
   .mobile-toggle{
-    display: inline-flex !important;
-    flex: 0 0 44px;
     width: 44px;
     height: 44px;
+    padding: 8px;
+  }
+  .mobile-toggle span{
+    width: 20px;
+    height: 3px;
   }
   .mobile-search{
     grid-template-columns: 1fr 92px;

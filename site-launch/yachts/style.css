@@ -953,16 +953,38 @@ svg {
 
   .navbar {
     padding: 18px 12px 26px;
+    gap: 8px;
+  }
+
+  .brand-name {
+    font-size: 24px;
+    letter-spacing: 0.04em;
+  }
+
+  .brand-sub {
+    margin-left: 0;
+    font-size: 9px;
   }
 
   .mobile-header-actions {
-    gap: 40px;
+    gap: 8px;
   }
 
   .btn-book-mobile {
-    padding: 11px 14px;
-    font-size: 11px;
-    letter-spacing: 0.12em;
+    padding: 11px 12px;
+    font-size: 12px;
+    letter-spacing: 0.18em;
+  }
+
+  .mobile-toggle {
+    width: 44px;
+    height: 44px;
+    padding: 8px;
+  }
+
+  .mobile-toggle span {
+    width: 20px;
+    height: 3px;
   }
 
   .mobile-menu-inner {

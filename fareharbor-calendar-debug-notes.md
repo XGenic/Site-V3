@@ -61,6 +61,105 @@ The shared-sidebar cache-bust query was bumped to:
 
 Without this extra layer, Rocket Loader can rewrite/delay the yacht sidebar generator before it writes the protected FareHarbor script.
 
+## Future Calendar Template
+
+Use this checklist whenever adding a new FareHarbor calendar.
+
+### Direct Service Page Calendar
+
+Use this pattern inside the `.fh-embed` wrapper:
+
+```html
+<div class="fh-embed" aria-label="FareHarbor booking calendar">
+  <script data-cfasync="false" src="https://fareharbor.com/embeds/script/calendar/SHORTNAME_OR_ACCOUNT/items/ITEM_ID/?fallback=simple&full-items=yes&flow=FLOW_ID&force-small=yes"></script>
+  <script data-cfasync="false">
+    (function () {
+      // Keep FareHarbor's parent/cart UUID unique, but pin this calendar to the compact bucket.
+      var compactCalendarUuid = "00000000-0000-4000-8000-000000000002";
+      var currentScript = document.currentScript;
+      var calendarWrap = currentScript && currentScript.previousElementSibling;
+      var calendarIframe = calendarWrap && calendarWrap.querySelector("iframe");
+
+      if (!calendarIframe) {
+        return;
+      }
+
+      try {
+        var calendarSrc = new URL(calendarIframe.src);
+        calendarSrc.searchParams.set("u", compactCalendarUuid);
+        calendarIframe.src = calendarSrc.toString();
+      } catch (error) {}
+    }());
+  </script>
+</div>
+```
+
+Required pieces:
+
+1. FareHarbor script has `data-cfasync="false"`.
+2. FareHarbor script URL includes `force-small=yes`.
+3. The compact helper script is immediately after the FareHarbor script.
+4. The helper script also has `data-cfasync="false"`.
+
+### Direct Service Page Config
+
+If the same service page has a `window.servicePageConfig.sidebar.fareHarborSrc`, include `force-small=yes` there too:
+
+```js
+"sidebar": {
+  "fareHarborSrc": "https://fareharbor.com/embeds/script/calendar/SHORTNAME_OR_ACCOUNT/items/ITEM_ID/?fallback=simple&full-items=yes&flow=FLOW_ID&force-small=yes"
+}
+```
+
+### Yacht Page Calendar
+
+Yacht pages should not manually add the compact helper in each yacht page. They use:
+
+`site-launch/assets/yacht/shared-sidebar.js`
+
+For a yacht page, use this pattern:
+
+```html
+<script data-cfasync="false">
+  window.pageSidebar = {
+    fareHarborSrc: "https://fareharbor.com/embeds/script/calendar/SHORTNAME_OR_ACCOUNT/items/ITEM_ID/?fallback=simple&full-items=yes&flow=FLOW_ID&force-small=yes",
+    pricing: {
+      groups: []
+    }
+  };
+</script>
+<script data-cfasync="false" src="/site-launch/assets/yacht/shared-sidebar.js?v=20260514-fh-calendar"></script>
+```
+
+Required pieces:
+
+1. The inline `window.pageSidebar` script has `data-cfasync="false"`.
+2. The `fareHarborSrc` URL includes `force-small=yes`.
+3. The `shared-sidebar.js` include has `data-cfasync="false"`.
+4. The `shared-sidebar.js` include uses the current cache-bust query.
+
+### URL Notes
+
+For Flamingo calendars, URLs often look like:
+
+```txt
+https://fareharbor.com/embeds/script/calendar/flamingoyachtcharters/items/ITEM_ID/?fallback=simple&full-items=yes&flow=860133&force-small=yes
+```
+
+For 100 Pro Boats / ASN calendars, URLs often look like:
+
+```txt
+https://fareharbor.com/embeds/script/calendar/100proboats/items/ITEM_ID/?fallback=simple&ref=flamingoyachtcharters-asn&asn=flamingoyachtcharters&asn-ref=flamingoyachtcharters-asn&full-items=yes&flow=no&force-small=yes
+```
+
+If the URL already has query parameters, append:
+
+`&force-small=yes`
+
+If the URL has no query string, append:
+
+`?force-small=yes`
+
 ## Verification
 
 The compact UUID was checked directly against the FareHarbor iframe URL. Expected markers:
