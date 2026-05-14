@@ -81,7 +81,26 @@ ultimate vision of maritime excitement.</p>
                   <div id="book" class="cal service-calendar-only" aria-label="Booking calendar">
                     <div class="cal-body">
                       <div class="fh-embed" aria-label="FareHarbor booking calendar">
-                        <script src="https://fareharbor.com/embeds/script/calendar/flamingoyachtcharters/items/506498/?fallback=simple&full-items=yes&flow=860133"></script>
+                        <script data-cfasync="false" src="https://fareharbor.com/embeds/script/calendar/flamingoyachtcharters/items/506498/?fallback=simple&full-items=yes&flow=860133&force-small=yes"></script>
+                        <script data-cfasync="false">
+                          (function () {
+                            // Keep FareHarbor's parent/cart UUID unique, but pin this calendar to the compact bucket.
+                            var compactCalendarUuid = "00000000-0000-4000-8000-000000000002";
+                            var currentScript = document.currentScript;
+                            var calendarWrap = currentScript && currentScript.previousElementSibling;
+                            var calendarIframe = calendarWrap && calendarWrap.querySelector("iframe");
+
+                            if (!calendarIframe) {
+                              return;
+                            }
+
+                            try {
+                              var calendarSrc = new URL(calendarIframe.src);
+                              calendarSrc.searchParams.set("u", compactCalendarUuid);
+                              calendarIframe.src = calendarSrc.toString();
+                            } catch (error) {}
+                          }());
+                        </script>
                       </div>
                     </div>
                   </div>
@@ -392,7 +411,7 @@ window.servicePageConfig = {
     ]
   },
   "sidebar": {
-    "fareHarborSrc": "https://fareharbor.com/embeds/script/calendar/flamingoyachtcharters/items/506498/?fallback=simple&full-items=yes&flow=860133"
+    "fareHarborSrc": "https://fareharbor.com/embeds/script/calendar/flamingoyachtcharters/items/506498/?fallback=simple&full-items=yes&flow=860133&force-small=yes"
   },
   "noSidebar": true
 };

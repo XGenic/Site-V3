@@ -1250,11 +1250,14 @@ tr:last-child td{ border-bottom: 0; }
   border-radius: 16px;
   border: 1px solid rgba(14,18,22,.10);
   background: rgba(255,255,255,.78);
-  overflow:hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   min-width: 0;
   position: relative;
   max-height: 980px;
   transition: max-height .28s ease;
+  scrollbar-gutter: stable both-edges;
+  -webkit-overflow-scrolling: touch;
 }
 
 .cal .cal-body{ padding: 10px 12px; }

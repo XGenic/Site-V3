@@ -75,6 +75,18 @@
     .replace(/"/g, '&quot;')
     .replace(/'/g, '&#39;');
 
+  const withFareHarborCalendarDefaults = (src) => {
+    try {
+      const url = new URL(src);
+      if (url.hostname === 'fareharbor.com' && url.pathname.includes('/embeds/script/calendar/')) {
+        url.searchParams.set('force-small', 'yes');
+      }
+      return url.toString();
+    } catch (error) {
+      return src;
+    }
+  };
+
   const normalizeColumn = (column) => {
     if (typeof column === 'string') {
       return { key: toKey(column), label: column };
@@ -217,6 +229,8 @@
     },
   };
 
+  const fareHarborSrc = withFareHarborCalendarDefaults(config.fareHarborSrc);
+
   document.write(`
     <aside class="panel right" aria-label="Booking panel">
       <div class="summary">
@@ -227,7 +241,26 @@
         <div id="book" class="cal" aria-label="Booking calendar">
           <div class="cal-body">
             <div class="fh-embed" aria-label="FareHarbor booking calendar">
-              <script src="${escapeHtml(config.fareHarborSrc)}"><\/script>
+              <script data-cfasync="false" src="${escapeHtml(fareHarborSrc)}"><\/script>
+              <script data-cfasync="false">
+                (function () {
+                  // Keep FareHarbor's parent/cart UUID unique, but pin this calendar to the compact bucket.
+                  var compactCalendarUuid = "00000000-0000-4000-8000-000000000002";
+                  var currentScript = document.currentScript;
+                  var calendarWrap = currentScript && currentScript.previousElementSibling;
+                  var calendarIframe = calendarWrap && calendarWrap.querySelector("iframe");
+
+                  if (!calendarIframe) {
+                    return;
+                  }
+
+                  try {
+                    var calendarSrc = new URL(calendarIframe.src);
+                    calendarSrc.searchParams.set("u", compactCalendarUuid);
+                    calendarIframe.src = calendarSrc.toString();
+                  } catch (error) {}
+                }());
+              <\/script>
             </div>
           </div>
         </div>
