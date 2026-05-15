@@ -36,9 +36,9 @@ Important detail: the parent FareHarbor/cart/lightframe UUID is left untouched, 
 
 As of 2026-05-14, this was applied across the project to FareHarbor calendar embeds, excluding `site-launch/book-now` by request.
 
-Service pages with literal calendar script tags were updated directly:
+Activity pages with literal calendar script tags were updated directly:
 
-`site-launch/services/*/index.html`
+`site-launch/activities/*/index.html`
 
 Yacht pages use config strings:
 
@@ -65,7 +65,7 @@ Without this extra layer, Rocket Loader can rewrite/delay the yacht sidebar gene
 
 Use this checklist whenever adding a new FareHarbor calendar.
 
-### Direct Service Page Calendar
+### Direct Activity Page Calendar
 
 Use this pattern inside the `.fh-embed` wrapper:
 
@@ -101,9 +101,9 @@ Required pieces:
 3. The compact helper script is immediately after the FareHarbor script.
 4. The helper script also has `data-cfasync="false"`.
 
-### Direct Service Page Config
+### Direct Activity Page Config
 
-If the same service page has a `window.servicePageConfig.sidebar.fareHarborSrc`, include `force-small=yes` there too:
+If the same activity page has a `window.activityPageConfig.sidebar.fareHarborSrc`, include `force-small=yes` there too:
 
 ```js
 "sidebar": {
@@ -202,9 +202,9 @@ Ask FareHarbor support whether they can disable automatic availability/date sele
 
 ## Height / "See More" Overflow
 
-The service calendar card has a parent-side height cap in:
+The activity calendar card has a parent-side height cap in:
 
-`site-launch/services/styles.css`
+`site-launch/activities/styles.css`
 
 Selector:
 

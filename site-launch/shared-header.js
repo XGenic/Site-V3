@@ -39,17 +39,17 @@ window.siteHeaderTemplate = `
       <li><a href="/site-launch/">Home</a></li>
 
       <li class="has-dropdown">
-        <a class="is-current" href="/site-launch/services/">Activities</a>
+        <a class="is-current" href="/site-launch/activities/">Activities</a>
         <div class="dropdown-menu" role="menu" aria-label="Activities">
-          <a href="/site-launch/services/bachelorette-party/">Bachelorette Party</a>
-          <a href="/site-launch/services/bimini-trip/">Bimini Trip</a>
-          <a href="/site-launch/services/catamaran-charters/">Catamaran Charters</a>
-          <a href="/site-launch/services/dinner-cruise/">Dinner Cruise</a>
-          <a href="/site-launch/services/learn-to-sail/">Learn to Sail</a>
-          <a href="/site-launch/services/millionaires-row-tour/">Millionaires Row Tour</a>
-          <a href="/site-launch/services/no-captain-rentals/">No Captain Rentals</a>
-          <a href="/site-launch/services/sandbar-trip/">Sandbar Trip</a>
-          <a href="/site-launch/services/sunset-cruise/">Sunset Cruise</a>
+          <a href="/site-launch/activities/bachelorette-party/">Bachelorette Party</a>
+          <a href="/site-launch/activities/bimini-trip/">Bimini Trip</a>
+          <a href="/site-launch/activities/catamaran-charters/">Catamaran Charters</a>
+          <a href="/site-launch/activities/dinner-cruise/">Dinner Cruise</a>
+          <a href="/site-launch/activities/learn-to-sail/">Learn to Sail</a>
+          <a href="/site-launch/activities/millionaires-row-tour/">Millionaires Row Tour</a>
+          <a href="/site-launch/activities/no-captain-rentals/">No Captain Rentals</a>
+          <a href="/site-launch/activities/sandbar-trip/">Sandbar Trip</a>
+          <a href="/site-launch/activities/sunset-cruise/">Sunset Cruise</a>
         </div>
       </li>
 
@@ -128,19 +128,19 @@ window.siteHeaderTemplate = `
 
         <div class="mobile-group">
           <div class="mobile-row">
-            <a class="is-current" href="/site-launch/services/">Activities</a>
+            <a class="is-current" href="/site-launch/activities/">Activities</a>
             <button class="mobile-subtoggle" type="button" data-target="mobActivities" aria-expanded="false" aria-label="Toggle Activities">&#8964;</button>
           </div>
           <div class="mobile-submenu" id="mobActivities" hidden>
-            <a href="/site-launch/services/bachelorette-party/">Bachelorette Party</a>
-            <a href="/site-launch/services/bimini-trip/">Bimini Trip</a>
-            <a href="/site-launch/services/catamaran-charters/">Catamaran Charters</a>
-            <a href="/site-launch/services/dinner-cruise/">Dinner Cruise</a>
-            <a href="/site-launch/services/learn-to-sail/">Learn to Sail</a>
-            <a href="/site-launch/services/millionaires-row-tour/">Millionaires Row Tour</a>
-            <a href="/site-launch/services/no-captain-rentals/">No Captain Rentals</a>
-            <a href="/site-launch/services/sandbar-trip/">Sandbar Trip</a>
-            <a href="/site-launch/services/sunset-cruise/">Sunset Cruise</a>
+            <a href="/site-launch/activities/bachelorette-party/">Bachelorette Party</a>
+            <a href="/site-launch/activities/bimini-trip/">Bimini Trip</a>
+            <a href="/site-launch/activities/catamaran-charters/">Catamaran Charters</a>
+            <a href="/site-launch/activities/dinner-cruise/">Dinner Cruise</a>
+            <a href="/site-launch/activities/learn-to-sail/">Learn to Sail</a>
+            <a href="/site-launch/activities/millionaires-row-tour/">Millionaires Row Tour</a>
+            <a href="/site-launch/activities/no-captain-rentals/">No Captain Rentals</a>
+            <a href="/site-launch/activities/sandbar-trip/">Sandbar Trip</a>
+            <a href="/site-launch/activities/sunset-cruise/">Sunset Cruise</a>
           </div>
         </div>
 
