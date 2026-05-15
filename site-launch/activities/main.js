@@ -1,52 +1,5 @@
 // Tiny helpers only (keep page fast)
 (function(){
-  const injectSharedHeader = () => {
-    const mount = document.querySelector('[data-include="site-header"]');
-    if (!mount || !window.siteHeaderTemplate) return;
-    mount.outerHTML = window.siteHeaderTemplate.trim();
-  };
-
-  const setupMobileMenu = () => {
-    const mobileToggle = document.getElementById('mobileToggle');
-    const mobileMenu = document.getElementById('mobileMenu');
-    const mobileClose = document.getElementById('mobileClose');
-    if (!mobileToggle || !mobileMenu) return;
-    if (mobileToggle.dataset.sharedHeaderBound === 'true') return;
-    mobileToggle.dataset.sharedHeaderBound = 'true';
-
-    const setMobileMenu = (open) => {
-      if (open) mobileMenu.removeAttribute('hidden');
-      else mobileMenu.setAttribute('hidden', '');
-      mobileToggle.setAttribute('aria-expanded', String(open));
-      document.body.style.overflow = open ? 'hidden' : '';
-    };
-
-    mobileToggle.addEventListener('click', () => {
-      const isOpen = mobileMenu.hasAttribute('hidden') === false;
-      setMobileMenu(!isOpen);
-    });
-
-    mobileClose?.addEventListener('click', () => setMobileMenu(false));
-    mobileMenu.addEventListener('click', (e) => {
-      if (e.target === mobileMenu) setMobileMenu(false);
-    });
-    mobileMenu.querySelectorAll('a').forEach((a) => {
-      a.addEventListener('click', () => setMobileMenu(false));
-    });
-
-    mobileMenu.querySelectorAll('.mobile-subtoggle').forEach((btn) => {
-      btn.addEventListener('click', () => {
-        const id = btn.getAttribute('data-target');
-        const panel = id ? document.getElementById(id) : null;
-        if (!panel) return;
-        const expanded = btn.getAttribute('aria-expanded') === 'true';
-        btn.setAttribute('aria-expanded', String(!expanded));
-        if (expanded) panel.setAttribute('hidden', '');
-        else panel.removeAttribute('hidden');
-      });
-    });
-  };
-
   const setupAddonsPanels = () => {
     const MAX_VISIBLE_ITEMS = 5;
     const panels = Array.from(document.querySelectorAll('.addons-panel'));
@@ -227,13 +180,9 @@
     });
   };
 
-  injectSharedHeader();
-
   const year = document.getElementById('year');
   if (year) year.textContent = String(new Date().getFullYear());
 
-  // Mobile menu fallback for standalone pages without the shared header initializer.
-  setupMobileMenu();
   setupAddonsPanels();
   setupContactForms();
   setupBoatSelection();

@@ -1,81 +1,6 @@
 (() => {
   const VALID_TIERS = new Set(["all", "luxury", "premium", "standard", "sandbar"]);
 
-  const mountHeader = () => {
-    const mountPoint = document.querySelector("#site-header");
-    if (!mountPoint || typeof window.siteHeaderTemplate !== "string") {
-      return;
-    }
-
-    mountPoint.outerHTML = window.siteHeaderTemplate.trim();
-  };
-
-  const initHeader = () => {
-    const mobileMenu = document.querySelector("#mobileMenu");
-    const mobileToggle = document.querySelector("#mobileToggle");
-    const mobileClose = document.querySelector("#mobileClose");
-    const submenuToggles = Array.from(document.querySelectorAll(".mobile-subtoggle"));
-
-    if (!mobileMenu || !mobileToggle || !mobileClose) {
-      return;
-    }
-    if (mobileToggle.dataset.sharedHeaderBound === "true") {
-      return;
-    }
-    mobileToggle.dataset.sharedHeaderBound = "true";
-
-    const setMenuState = (isOpen) => {
-      mobileMenu.hidden = !isOpen;
-      mobileToggle.setAttribute("aria-expanded", String(isOpen));
-      document.body.classList.toggle("menu-open", isOpen);
-    };
-
-    mobileToggle.addEventListener("click", () => {
-      const isOpen = mobileToggle.getAttribute("aria-expanded") === "true";
-      setMenuState(!isOpen);
-    });
-
-    mobileClose.addEventListener("click", () => {
-      setMenuState(false);
-    });
-
-    mobileMenu.addEventListener("click", (event) => {
-      if (event.target === mobileMenu) {
-        setMenuState(false);
-      }
-    });
-
-    submenuToggles.forEach((button) => {
-      button.addEventListener("click", () => {
-        const targetId = button.getAttribute("data-target");
-        if (!targetId) {
-          return;
-        }
-
-        const submenu = document.getElementById(targetId);
-        if (!submenu) {
-          return;
-        }
-
-        const isExpanded = button.getAttribute("aria-expanded") === "true";
-        button.setAttribute("aria-expanded", String(!isExpanded));
-        submenu.hidden = isExpanded;
-      });
-    });
-
-    document.addEventListener("keydown", (event) => {
-      if (event.key === "Escape") {
-        setMenuState(false);
-      }
-    });
-
-    window.addEventListener("resize", () => {
-      if (window.innerWidth > 960) {
-        setMenuState(false);
-      }
-    });
-  };
-
   const initFilter = () => {
     const filter = document.querySelector(".yacht-filter");
     if (!filter) {
@@ -122,7 +47,5 @@
     setActive(initialTier);
   };
 
-  mountHeader();
-  initHeader();
   initFilter();
 })();
